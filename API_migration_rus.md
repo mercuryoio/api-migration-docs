@@ -25,7 +25,7 @@ https://api.mercuryo.io/v1.6/widget/buy/rate?from=USD&to=BTC&amount=150&widget_i
 
 Пример:
 
-![buy/rate](https://github.com/IgnatBatuev/draft1.6api/blob/main/buy_comparev3.png)
+![buy/rate](https://github.com/mercuryoio/api-migration-docs/blob/master/buy_compare.png)
 # /widget/sell/rate
 Запрос:
 
@@ -38,7 +38,7 @@ https://api.mercuryo.io/v1.6/widget/sell/rate?from=BTC&to=USD&amount=0.003&widge
 
 Пример:
 
-![buy/rate](https://github.com/IgnatBatuev/draft1.6api/blob/main/sell__comparev3.png)
+![buy/rate](https://github.com/mercuryoio/api-migration-docs/blob/master/sell__compare.png)
 # /public/convert
 Запрос:
 
@@ -53,4 +53,4 @@ https://api.mercuryo.io/v1.6/public/convert?from=EUR&to=BTC&type=buy&amount=100&
 
 Пример:
 
-![public/convert](https://github.com/IgnatBatuev/draft1.6api/blob/main/conver_comparev3.png)
+![public/convert](https://github.com/mercuryoio/api-migration-docs/blob/master/convert_compare.png)
