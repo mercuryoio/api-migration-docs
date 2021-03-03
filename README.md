@@ -27,7 +27,7 @@ https://api.mercuryo.io/v1.6/widget/sell/rate?from=BTC&to=USD&amount=0.003&widge
 
 Example:
 
-![buy/rate](https://github.com/IgnatBatuev/draft1.6api/blob/main/buy_comparev3.png)
+![buy/rate](https://github.com/mercuryoio/api-migration-docs/blob/master/buy_compare.png)
 # /widget/sell/rate
 
 Request:
@@ -40,7 +40,7 @@ https://api.mercuryo.io/v1.6/widget/sell/rate?from=BTC&to=USD&amount=0.003&widge
 
 Example:
 
-![buy/rate](https://github.com/IgnatBatuev/draft1.6api/blob/main/sell__comparev3.png)
+![buy/rate](https://github.com/mercuryoio/api-migration-docs/blob/master/sell__compare.png)
 # public / convert
 
 Request:
@@ -56,4 +56,4 @@ Added fields in response body
 
 Example:
 
-![public\convert](https://github.com/IgnatBatuev/draft1.6api/blob/main/conver_comparev3.png)
+![public\convert](https://github.com/mercuryoio/api-migration-docs/blob/master/convert_compare.png)
