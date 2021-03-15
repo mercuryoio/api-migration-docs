@@ -57,3 +57,21 @@ Added fields in response body
 Example:
 
 ![public\convert](https://github.com/mercuryoio/api-migration-docs/blob/master/convert_compare.png)
+
+# public / rates
+
+Request:
+
+https://api.mercuryo.io/v1.6/widget/rates
+
+Removed fields:
+
+1. `amount`
+2. `rate`
+
+All fiat rates united in one object
+
+Example (only for BTC):
+
+https://github.com/mercuryoio/api-migration-docs/blob/master/rate_compare.png
+
