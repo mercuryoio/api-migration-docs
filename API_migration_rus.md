@@ -54,3 +54,21 @@ https://api.mercuryo.io/v1.6/public/convert?from=EUR&to=BTC&type=buy&amount=100&
 Пример:
 
 ![public/convert](https://github.com/mercuryoio/api-migration-docs/blob/master/convert_compare.png)
+
+# public / rates
+
+Запрос:
+
+https://api.mercuryo.io/v1.6/widget/rates
+
+Удаленные объекты:
+
+1. `amount`
+2. `rate`
+
+Все курсы фиата объединены в один объект
+
+Пример (только для BTC):
+
+![public\rates](https://github.com/mercuryoio/api-migration-docs/blob/master/rate_compare.png)
+
