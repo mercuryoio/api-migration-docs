@@ -73,5 +73,5 @@ All fiat rates united in one object
 
 Example (only for BTC):
 
-https://github.com/mercuryoio/api-migration-docs/blob/master/rate_compare.png
+![public\rates](https://github.com/mercuryoio/api-migration-docs/blob/master/rate_compare.png)
 
