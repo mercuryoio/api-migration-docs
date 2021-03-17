@@ -57,8 +57,6 @@ These webhooks allow you to get current transaction status and include all the d
 `merchant_transaction_id` &ndash; generated unique ID by a partner, that was created in step 2		
 
 **Callbacks Response Body:**
-
-`
   
         "data": {
             "id": "04ecdb45d433f9266",
@@ -85,7 +83,7 @@ These webhooks allow you to get current transaction status and include all the d
             "updated_at_ts": 1597137110,
             "merchant_transaction_id": "9046"
 
-`
+
 
         `"data": {
             "id": "04ecdb563c2bb0492", 
