@@ -58,7 +58,7 @@ These webhooks allow you to get current transaction status and include all the d
 
 **Callbacks Response Body:**
   
-        "data": {
+       `"data": {
             "id": "04ecdb45d433f9266",
             "tx": {
                 "id": null,
@@ -81,7 +81,8 @@ These webhooks allow you to get current transaction status and include all the d
             "created_at_ts": 1597137093,
             "fiat_currency": "EUR",
             "updated_at_ts": 1597137110,
-            "merchant_transaction_id": "9046"
+            "merchant_transaction_id": "9046"`
+
 
 
 
