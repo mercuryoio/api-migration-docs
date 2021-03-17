@@ -84,6 +84,7 @@ These webhooks allow you to get current transaction status and include all the d
             "merchant_transaction_id": "9046"`
 
 
+Or 
 
 
         `"data": {
