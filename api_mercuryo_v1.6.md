@@ -58,7 +58,9 @@ These webhooks allow you to get current transaction status and include all the d
 
 **Callbacks Response Body:**
 
-`{
+`
+{
+  
         "data": {
             "id": "04ecdb45d433f9266",
             "tx": {
@@ -84,7 +86,8 @@ These webhooks allow you to get current transaction status and include all the d
             "updated_at_ts": 1597137110,
             "merchant_transaction_id": "9046"
 
-}`
+}
+`
 
 `{
         "data": {
@@ -108,7 +111,8 @@ These webhooks allow you to get current transaction status and include all the d
             "fiat_currency": "EUR",
             "updated_at_ts": 1597137612,
             "merchant_transaction_id": "9046"
-}`
+}
+`
 
 `id` &ndash; unique ID of the current event
 
@@ -140,7 +144,7 @@ Per 1 transaction there are two internal operations "buy" and "withdraw"
 
 `descriptor_failed` the user entered an invalid descriptor three times
 
-**Type: `withdraw` **
+**Type: `withdraw`**
 
 `new` transaction initiated
 
@@ -167,44 +171,36 @@ Per 1 transaction there are two internal operations "buy" and "withdraw"
 **rate+mercuryo fees+partners fee**
 
 Request:
-
 https://api.mercuryo.io/v1.6/public/rates
 
 Example:
-
 https://api.mercuryo.io/v1.6/public/rates?widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3 
 
 
 **rate+mercuryo fee**
 
 Request:
-
 https://api.mercuryo.io/v1.6/widget/rates/partner-fee-off
 
 Example:
-
 https://api.mercuryo.io/v1.6/widget/rates/partner-fee-off?widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3
 
 
 **clear exchange rate**
 
 Request:
-
 https://api.mercuryo.io/v1.6/widget/rates/fee-off
 
 Example:
-
 https://api.mercuryo.io/v1.6/widget/rates/fee-off?widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3
 
 
 **How to get transaction status**
 
 Request:
-
 https://api.mercuryo.io/v1.6/widget/transactions
 
 Example:
-
 https://api.mercuryo.io/v1.6/widget/transactions?widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3&merchant_transaction_id=1234
 
 
@@ -213,32 +209,26 @@ https://api.mercuryo.io/v1.6/widget/transactions?widget_id=d9d9dab5-7127-417b-92
 1. **buy** 
 
 Request:
-
 https://api.mercuryo.io/v1.6/public/convert
 
 Example:
-
 https://api.mercuryo.io/v1.6/public/convert?from=EUR&to=BTC&type=buy&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3 
 
 
 2. **sell**
 
 Request:
-
 https://api.mercuryo.io/v1.6/public/convert
 
 Example:
-
 https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.1&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3
 
 
 3.
 Request:
-
 https://api.mercuryo.io/v1.6/widget/buy/rate
 
 Example:
-
 https://api.mercuryo.io/v1.6/widget/buy/rate?from=USD&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3
 
 
@@ -253,21 +243,19 @@ https://api.mercuryo.io/v1.6/public/currencies-sell
 
 1. **buy** 
  
-Request:https://api.mercuryo.io/v1.6/public/currency-limits
+Request:
+https://api.mercuryo.io/v1.6/public/currency-limits
 
 Example:
-
 https://api.mercuryo.io/v1.6/public/currency-limits?from=USD&to=BTC&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3&type=buy
 
 
 2. **sell** 
 
 Request:
-
 https://api.mercuryo.io/v1.6/public/currency-limits
 
 Example:
-
 https://api.mercuryo.io/v1.6/public/currency-limits?from=USD&to=BTC&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3&type=sell	
 
 
