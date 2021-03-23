@@ -333,7 +333,7 @@ you can also get your own testnet crypto address (see III)
 					
 https://sandbox-api.mrcr.io/v1.5/widget/transactions?widget_id=60b69ef8-9287-49d7-8164-94d87d8982c4&merchant_transaction_id=1234
 				
-*testnet widget_id &ndash; `60b69ef8-9287-49d7-8164-94d87d8982c4` *merchant_transaction_id - generated unique id by partner that was created in the step 2
+testnet widget_id &ndash; `60b69ef8-9287-49d7-8164-94d87d8982c4` merchant_transaction_id - generated unique id by partner that was created in the step 2
 					
 Response example (see 1st page)
 
