@@ -44,9 +44,9 @@ You can set-up a signature check and see the `X-Signature` HTTP header with a si
 
 You can generate a key here, for [example](https://implode.io/)
 
-`$key = '...';
+`$key = '...'
 
-$json = '{...}';
+$json = '{...}'
 
 return hash_hmac('sha256', $json, $key)`
 
