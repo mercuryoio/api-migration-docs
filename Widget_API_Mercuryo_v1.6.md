@@ -44,11 +44,11 @@ You can set-up a signature check and see the `X-Signature` HTTP header with a si
 
 You can generate a key here, for [example](https://implode.io/)
 
-`$key = '...'
+`$key = '...';`
 
-$json = '{...}'
+`$json = '{...}';`
 
-return hash_hmac('sha256', $json, $key)`
+`return hash_hmac('sha256', $json, $key)`
 
 The signature can be checked by generating a hash through HMAC algorithm sha256 of the request body (JSON request) and a key that is in the partner's dashboard in the Sign Key field.
 
