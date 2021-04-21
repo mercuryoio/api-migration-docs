@@ -2,26 +2,26 @@
 Widget is the most convenient way to integrate with Mercuryo. There are two ways to integrate - redirect and iframe
 [FAQ](https://help.mercuryo.io/en/articles/4519473-mercuryo-widget-faq)
 
-1. [How to start](/Widget_API_Mercuryo_v1.6.md1-how-to-start)
+1. [How to start](/Widget_API_Mercuryo_v1.6.md#1-how-to-start)
 
    1.1. [Get parameters](/Widget_API_Mercuryo_v1.6.md/#11-get-parameters)
  
-   1.2. [Get a dashboard](/Widget_API_Mercuryo_v1.6.md12-get-a-dashboard)
+   1.2. [Get a dashboard](/Widget_API_Mercuryo_v1.6.md/#12-get-a-dashboard)
  
-   1.3. [Step 3. Set up a widget](//Widget_API_Mercuryo_v1.6.md##13-step-3-.-set-up-a-widget)
+   1.3. [Set up a widget](/Widget_API_Mercuryo_v1.6.md#13-set-up-a-widget)
  
-   1.4. [Step 4. Check signature wallet address](//Widget_API_Mercuryo_v1.6.md##14-step-4-.-check-signature-wallet-address)
+   1.4. [Check signature wallet address](/Widget_API_Mercuryo_v1.6.md#14-check-signature-wallet-address)
 2. [Webhooks](/Widget_API_Mercuryo_v1.6.md#2-webhooks)
 3. [Transaction status types ](/Widget_API_Mercuryo_v1.6.md#3-transaction-status-types)
 
-   3.1 [buy](//Widget_API_Mercuryo_v1.6.md##31-buy)
+   3.1 [buy](//Widget_API_Mercuryo_v1.6.md#31-buy)
 
-   3.2 [sell](//Widget_API_Mercuryo_v1.6.md##32-sell)
+   3.2 [sell](//Widget_API_Mercuryo_v1.6.md#32-sell)
 4. [API METHODS](/Widget_API_Mercuryo_v1.6.md#4-api-methods)
 5. [Signature Wallet Address](/Widget_API_Mercuryo_v1.6.md#5-signature-wallet-address)
 6. [Test](/Widget_API_Mercuryo_v1.6.md#6-test)
 
-   6.1. [SANDBOX](//Widget_API_Mercuryo_v1.6.md#6-test##61-sandbox)
+   6.1. [SANDBOX](//Widget_API_Mercuryo_v1.6.md#61-sandbox)
  
    6.2. [Check test transaction ](//Widget_API_Mercuryo_v1.6.md#63-check-test-transaction)
 	
