@@ -25,6 +25,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
    6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#62-check-test-transaction)
 	
 ***
+***
 
 #### 1. How to start
 
@@ -157,6 +158,7 @@ In this case, the request body must not change.
 | `updated_at_ts` | timestamp of last update |
 | `merchant_transaction_id` | merchant transaction id |
 
+***
 ***
 
 ### 3. Transaction status types 
@@ -614,6 +616,7 @@ Signature generation [example](https://abunchofutils.com/u/computing/sha512-hash
 
 ![img4](https://github.com/mercuryoio/api-migration-docs/blob/master/img4.png)
 
+***
 ***
 
 ### 6. TEST
