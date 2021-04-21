@@ -23,7 +23,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
    6.1. [Mercuryo SANDBOX](/Widget_API_Mercuryo_v1.6.md/#61-mercuryo-sandbox)
  
-   6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#63-check-test-transaction)
+   6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#62-check-test-transaction)
 	
 ***
 
@@ -221,9 +221,9 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 
 1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#41-api-methods/####1-get-rates)
 
-   1.1. [rate+mercuryo fees+partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate+mercuryo-fees+partners-fee)
+   1.1. [rate mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate-mercuryo-fees-partners-fee)
  
-   1.2. [rate+mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate+mercuryo-fee)
+   1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
  
    1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
  
@@ -234,7 +234,7 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 
    3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
 4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
-5. [Get min/max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min/max-limits)
+5. [Get min or max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min-or-max-limits)
 
    5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
 
@@ -245,7 +245,7 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 			
 #### 4.1. Get rates
 
-##### 4.1.1 rate+mercuryo fees+partners fee
+##### 4.1.1 rate mercuryo fees partners fee
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/rates?widget_id=your_widget_id`
@@ -284,7 +284,7 @@ Response example:
 ```
 
 
-##### 4.1.2 rate+mercuryo fee
+##### 4.1.2 rate mercuryo fee
 
 Request:
 `GET https://api.mercuryo.io/v1.6/widget/rates/partner-fee-off?widget_id=your_widget_id`
@@ -517,7 +517,7 @@ Response example:
 ```
 ***
 
-#### 4.5. Get min/max limits				
+#### 4.5. Get min or max limits				
 
 ##### 4.5.1 buy 
  
