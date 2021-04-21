@@ -10,7 +10,6 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
  
    1.3. [Set up a widget](/Widget_API_Mercuryo_v1.6.md/#13-set-up-a-widget)
  
-   1.4. [Check signature wallet address](/Widget_API_Mercuryo_v1.6.md#14-check-signature-wallet-address)
 2. [Webhooks](/Widget_API_Mercuryo_v1.6.md#2-webhooks)
 3. [Transaction status types ](/Widget_API_Mercuryo_v1.6.md#3-transaction-status-types)
 
@@ -43,6 +42,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 | Section  | Description  | 
 | ------------- | -------------  |
 | Dashboard | page with information abou transactions, also you can add widget by tap on <Add widget> button |
+| Profile | you can set up your comission and change password |	
 | My widgets | list of widgets |
 | Widget callbacks | list of callbacks. You can send test callback from this page |
 | Reports | log of Transactions, Referrals or Referrals Withdraw. You need to choose one of them to find the information|
@@ -52,33 +52,18 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 ![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/img2.png)
 
-**Domain** &ndash; if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address)
-(1 widget = 1 domain)
-**Note:** Please make sure, there are no symbols or backspace after `https://domain.io` if you choose Redirect or after `https://yourdomain.com` if you choose iFrame, otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.
-**Backward URL** &ndash; merchant URL to which the users will return from Redirect
-**Callback URL** &ndash; merchant server URL which listens to callbacks automatically when Mercuryo’s updates status of a transaction. 
- 
-#### 1.4. Check signature wallet address
-
-**Sign Key** &ndash; Callbacks signature check
-
-When the status of a transaction changes, the partner receives a request with transaction data from Mercuryo. 
-
-You can set-up a signature check and see the `X-Signature` HTTP header with a signature. 
-
-You can generate a key here, for [example](https://implode.io/)
-
-``` 
-$key = '...';
-
-$json = '{...}';
-
-return hash_hmac('sha256', $json, $key) 
-```
-
-The signature can be checked by generating a hash through HMAC algorithm sha256 of the request body (JSON request) and a key that is in the partner's dashboard in the Sign Key field.
-
-In this case, the request body must not change.
+| Section  | Description  | 
+| ------------- | -------------  |
+| Name | your widget name |
+| Domain| | if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address)
+**Note:** Please make sure, there are no symbols or backspace after `https://domain.io` if you choose Redirect or after `https://yourdomain.com` if you choose iFrame, otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
+| Alias | your widget alias |
+| Backward URL | merchant URL to which the users will return from Redirect|
+| Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo’s updates status of a transaction| 
+| Sign Key | Callbacks signature check |
+| Check signature  checkbox | it shows will signature be checked or not |
+|  Secret Key | your secret key for your signature |
+| Is Active checkbox | it shows your is widget  active or not |
 
 ***
 ***
@@ -126,14 +111,18 @@ In this case, the request body must not change.
        {
     "payload": {
         "data": {
+	"id": "user_id",
+        "card": {
+              "number": "1111"
+            },
 	"tx": {
-	"id": "blockchain_transaction_id",
-	"address": "blockchain_address"
+	    "id": "blockchain_transaction_id",
+	    "address": "blockchain_address"
 	},
 	"type": "withdraw",
-	"user":{
-	"uuid4":"mercuryo_user_uuid4,
-	"country_code":"nz"
+	"user": {
+	    "uuid4": "mercuryo_user_uuid4,
+	    "country_code": "nz"
 	},
 	"amount": "0.02833",
 	"status": "pending",
@@ -144,26 +133,29 @@ In this case, the request body must not change.
 	"created_at_ts": 1615320320,
 	"fiat_currency": "USD",
 	"updated_at_ts": 1615320320,
-	"id":"mercuryo_id",
-	"merchant_transaction_id":"merchant_transaction_id"
+	"id": "mercuryo_id",
+	"merchant_transaction_id": "merchant_transaction_id"
 	}
        }
 	```
 | Parameter  | Description  | 
 | ------------- | -------------  |
 | `id` | unique ID of the current event |
+| number | last 4 numbers of card number  |
+| id | blockchain transaction id |
+| type | transaction type |
 | `uuid4` | unique user ID |
 | `country_code` | code of users country |
-| `number` | last 4 numbers of card number |
 | `amount` | crypro amount |
 | `status` | transaction status |
 | `currency` | crypto currency |
-| `created_at` and `updated_at` | data of start and last update |
-|`fiat_currency` | fiat currency |
+| `created_at` | date of start |
+| `updated_at` | date of last update |
+| `fiat_currency` | fiat currency |
 | `created_at_ts` | timestamp of creation |
 | `fiat_currency` | code of fiat currency |
 | `updated_at_ts` | timestamp of last update |
-| `merchant_transaction_id` | merchant id |
+| `merchant_transaction_id` | merchant transaction id |
 
 ***
 
@@ -219,28 +211,28 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 
 ### 4. API METHODS 
 
-1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#41-api-methods/####1-get-rates)
+4.1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#41-api-methods/####1-get-rates)
 
-   1.1. [rate mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate-mercuryo-fees-partners-fee)
+   4.1.1. [rate mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate-mercuryo-fees-partners-fee)
  
-   1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
+   4.1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
  
-   1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
+   4.1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
  
-2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
-3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
+4.2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
+4.3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
-   3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
+   4.3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
 
-   3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
-4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
-5. [Get min or max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min-or-max-limits)
+   4.3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
+4.4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
+4.5. [Get min or max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min-or-max-limits)
 
-   5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
+   4.5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
 
-   5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
+   4.5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
   
-6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
+4.6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
 
 			
 #### 4.1. Get rates
