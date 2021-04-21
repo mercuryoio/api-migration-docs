@@ -29,13 +29,13 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 #### 1. How to start
 
-#### 1.1. Step 1. Get parameters
+#### 1.1. Get parameters
 
 1. For integrate Mercuryo to your own platform use [**iframe**](https://demo-widget.mercuryo.io)
 
 2. For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partner get the comissions as with iframe.
 
-#### 1.2. Step 2. Get a dashboard	
+#### 1.2. Get a dashboard	
 [Partners admin](https://partners.mercuryo.io)  
 
 ![img1](https://github.com/mercuryoio/api-migration-docs/blob/master/img1.png)
@@ -47,7 +47,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 | Widget callbacks | list of callbacks. You can send test callback from this page |
 | Reports | log of Transactions, Referrals or Referrals Withdraw. You need to choose one of them to find the information|
 
-#### 1.3 Step 3. Set up a widget
+#### 1.3 Set up a widget
 **My widgets → Create Partner Widget**
 
 ![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/img2.png)
@@ -58,7 +58,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 **Backward URL** &ndash; merchant URL to which the users will return from Redirect
 **Callback URL** &ndash; merchant server URL which listens to callbacks automatically when Mercuryo’s updates status of a transaction. 
  
-#### 1.4. Step 4. Check signature wallet address
+#### 1.4. Check signature wallet address
 
 **Sign Key** &ndash; Callbacks signature check
 
