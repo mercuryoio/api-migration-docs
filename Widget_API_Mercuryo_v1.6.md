@@ -55,8 +55,8 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 | Section  | Description  | 
 | ------------- | -------------  |
 | Name | your widget name |
-| Domain| | if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address) |
-| | **Note:** Please make sure, there are no symbols or backspace after `https://domain.io` if you choose Redirect or after `https://yourdomain.com` if you choose iFrame, otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
+| Domain |  if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address) 
+ **Note:** Please make sure, there are no symbols or backspace after `https://domain.io` if you choose Redirect or after `https://yourdomain.com` if you choose iFrame, otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
 | Alias | your widget alias |
 | Backward URL | merchant URL to which the users will return from Redirect|
 | Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo’s updates status of a transaction| 
