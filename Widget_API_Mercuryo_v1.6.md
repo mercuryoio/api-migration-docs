@@ -342,6 +342,30 @@ Request:
 
 Response example:
 
+```js
+ "status": 200,
+    "total": 18,
+    "next": null,
+    "prev": null,
+    "data": [
+        {
+            "buy": {
+                "id": "058dc74257a417582",
+                "transaction_id": "058dc74303d2d0459",
+                "widget_id": "25865df1-362d-411a-b9a1-f0acacf7e720",
+                "merchant_transaction_id": "qq1122ww",
+                "fiat_currency": "EUR",
+                "fiat_amount": "27.77",
+                "currency": "BTC",
+                "amount": "0.00300",
+                "status": "order_failed",
+                "created_at": "2020-12-11 10:41:07",
+                "updated_at": "2020-12-11 10:41:14",
+                "email": "74111111175@tt.st"
+            }
+        },
+	...
+```
 *** 
 
 #### 4.3. Get final crypto *buy* or fiat *sell* amounts
