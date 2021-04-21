@@ -219,33 +219,33 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 
 ### 4. API METHODS 
 
-1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/####1-get-rates)
+1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#41-api-methods/####1-get-rates)
 
-   1.1. [rate+mercuryo fees+partners fee](/Widget_API_Mercuryo_v1.6.md/#11-rate+mercuryo-fees+partners-fee)
+   1.1. [rate+mercuryo fees+partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate+mercuryo-fees+partners-fee)
  
-   1.2. [rate+mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#12-rate+mercuryo-fee)
+   1.2. [rate+mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate+mercuryo-fee)
  
-   1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#13-clear-exchange-rate)
+   1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
  
-2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#2-get-transaction-status)
-3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#3-get-final-crypto-buy-or-fiat-sell-amounts)
+2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
+3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
-   3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#31-buy)
+   3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
 
-   3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#32-sell)
-4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#4-get-the-list-of-supported-fiat-or-crypto-currencies)
-5. [Get min/max limits](/Widget_API_Mercuryo_v1.6.md/#5-get-min/max-limits)
+   3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
+4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
+5. [Get min/max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min/max-limits)
 
-   5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#51-buy)
+   5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
 
-   5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#52-sell)
+   5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
   
-6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#6-get-list-of-supported-countries)
+6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
 
 			
-#### 1. Get rates
+#### 4.1. Get rates
 
-##### 1.1 rate+mercuryo fees+partners fee
+##### 4.1.1 rate+mercuryo fees+partners fee
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/rates?widget_id=your_widget_id`
@@ -284,7 +284,7 @@ Response example:
 ```
 
 
-##### 1.2 rate+mercuryo fee
+##### 4.1.2 rate+mercuryo fee
 
 Request:
 `GET https://api.mercuryo.io/v1.6/widget/rates/partner-fee-off?widget_id=your_widget_id`
@@ -310,7 +310,7 @@ Response example:
             }, ... 
 ```
 
-##### 1.3 clear exchange rate
+##### 4.1.3 clear exchange rate
 
 Request:
 `GET https://api.mercuryo.io/v1.6/widget/rates/fee-off?widget_id=your_widget_id`
@@ -337,7 +337,7 @@ Response example:
 ```
 ***
 
-#### 2. Get transaction status
+#### 4.2. Get transaction status
 
 Request:
 `GET https://api.mercuryo.io/v1.6/widget/transactions?widget_id=your_widget_id&merchant_transaction_id=your_id`
@@ -351,9 +351,9 @@ Response example:
 
 *** 
 
-#### 3. Get final crypto *buy* or fiat *sell* amounts
+#### 4.3. Get final crypto *buy* or fiat *sell* amounts
 
-##### 3.1. buy
+##### 4.3.1. buy
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=fiat&to=crypto&type=buy&amount=fiat_ammount&widget_id=your_widget_id`
@@ -384,7 +384,7 @@ Response example:
 }
 ```
 
-##### 3.2. sell
+##### 4.3.2. sell
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=sell&amount=crypto_ammount&widget_id=your_widget_id`
@@ -415,7 +415,7 @@ Response example:
 }
 ```
 
-##### 3.3. buy rate
+##### 4.3.3. buy rate
 Request:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
 
@@ -456,7 +456,7 @@ Response example:
 ```
 ***
 
-#### 4. Get the list of supported fiat or crypto currencies
+#### 4.4. Get the list of supported fiat or crypto currencies
 
 1. **Buy**
 Request:
@@ -517,9 +517,9 @@ Response example:
 ```
 ***
 
-#### 5. Get min/max limits				
+#### 4.5. Get min/max limits				
 
-##### 5.1 buy 
+##### 4.5.1 buy 
  
 Request:
 `GET https://api.mercuryo.io/v1.6/public/currency-limits?from=fiat&to=crypto&widget_id=your_widget_id&type=buy`
@@ -550,7 +550,7 @@ Response example:
 }
 ```
 
-##### 5.2. sell 
+##### 4.5.2. sell 
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/currency-limits?from=fiat&to=crypto&widget_id=your_widget_id&type=sell`
@@ -581,7 +581,7 @@ Response example:
 }
 ```
 ***
-#### 6. Get list of supported countries
+#### 4.6. Get list of supported countries
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/card-countries` 
