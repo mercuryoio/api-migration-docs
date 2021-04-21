@@ -4,7 +4,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 1. [How to start](/Widget_API_Mercuryo_v1.6.md1-how-to-start)
 
-   1.1. [Get parameters](/Widget_API_Mercuryo_v1.6.md1-how-to-start/##11-get-parameters)
+   1.1. [Get parameters](/Widget_API_Mercuryo_v1.6.md/#11-get-parameters)
  
    1.2. [Get a dashboard](/Widget_API_Mercuryo_v1.6.md12-get-a-dashboard)
  
