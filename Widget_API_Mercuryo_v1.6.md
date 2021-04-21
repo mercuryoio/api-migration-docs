@@ -213,19 +213,19 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 
 ### 4. API METHODS 
 
-4.1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#41-api-methods/####1-get-rates)
+4.1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#41-api-methods/#41-get-rates)
 
-     4.1.1. [rate mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate-mercuryo-fees-partners-fee)
+   4.1.1. [rate mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate-mercuryo-fees-partners-fee)
  
-     4.1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
+   4.1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
  
-     4.1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
+   4.1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
 4.2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
 4.3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
-     4.3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
+   4.3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
 
-     4.3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
+   4.3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
 4.4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
 4.5. [Get min or max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min-or-max-limits)
 
