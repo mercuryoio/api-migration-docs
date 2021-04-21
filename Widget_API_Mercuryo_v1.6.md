@@ -58,7 +58,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 | Name | your widget name |
 | Domain |  if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address) 
  **Note:** Please make sure, there are no symbols or backspace after `https://domain.io` if you choose Redirect or after `https://yourdomain.com` if you choose iFrame, otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
-| Alias | your widget alias |
+| Alias | transfer your widget id to your widget alias |
 | Backward URL | merchant URL to which the users will return from Redirect|
 | Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo’s updates status of a transaction| 
 | Sign Key | Callbacks signature check |
@@ -108,7 +108,7 @@ In this case, the request body must not change.
   
  Callbacks Payload example:
  
-       ```JS
+ ```JS
        {
     "payload": {
         "data": {
@@ -138,13 +138,13 @@ In this case, the request body must not change.
 	"merchant_transaction_id": "merchant_transaction_id"
 	}
        }
-	```
+```
 | Parameter  | Description  | 
 | ------------- | -------------  |
 | `id` | unique ID of the current event |
-| number | last 4 numbers of card number  |
-| id | blockchain transaction id |
-| type | transaction type |
+| `number` | last 4 numbers of card number  |
+| `id` | blockchain transaction id |
+| `type` | transaction type |
 | `uuid4` | unique user ID |
 | `country_code` | code of users country |
 | `amount` | crypro amount |
@@ -635,9 +635,17 @@ signature = sha512(address+secret), where + concatenation operation.
 
 If the signature is invalid, the widget will not be displayed.
 
-Signature generation [example](https://abunchofutils.com/u/computing/sha512-hash-calculator)
+For signature generation you can use [this](https://www.freeformatter.com/)
 
-![img4](https://github.com/mercuryoio/api-migration-docs/blob/master/img4.png)
+Cryptography & Security -> HMAC Generator -> Fill the **Copy-paste the string here** field -> Fill the **Secret Key** field -> Select **SHA256** as message digest algorithm
+
+![img5](https://github.com/mercuryoio/api-migration-docs/blob/master/img5.png)
+
+**OR**
+
+Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string here** field
+
+![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/img6.png)
 
 ***
 ***
