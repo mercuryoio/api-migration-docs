@@ -4,7 +4,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 1. [How to start](/Widget_API_Mercuryo_v1.6.md1-how-to-start)
 
-   1.1. [Step 1. Get parameters](//Widget_API_Mercuryo_v1.6.md##11-step-1-.-get-parameters)
+   1.1. [Get parameters](//Widget_API_Mercuryo_v1.6.md##11-get-parameters)
  
    1.2. [Step 2. Get a dashboard](//Widget_API_Mercuryo_v1.6.md##12-step-2-.--get-a-dashboard)
  
@@ -22,10 +22,8 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 6. [Test](/Widget_API_Mercuryo_v1.6.md#6-test)
 
    6.1. [SANDBOX](//Widget_API_Mercuryo_v1.6.md##61-sandbox)
-
-   6.2. [Get testnet transaction status](//Widget_API_Mercuryo_v1.6.md##62-get-testnet-transaction-status)
  
-   6.3. [Check test transaction ](//Widget_API_Mercuryo_v1.6.md#63-check-test-transaction)
+   6.2. [Check test transaction ](//Widget_API_Mercuryo_v1.6.md#63-check-test-transaction)
 	
 ***
 
