@@ -219,28 +219,28 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 
 ### 4. API METHODS 
 
-1. [Get rates](//Widget_API_Mercuryo_v1.6.md/#4-api-methods/####1-get-rates)
+1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/####1-get-rates)
 
-   1.1. [rate+mercuryo fees+partners fee](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#11-rate+mercuryo-fees+partners-fee)
+   1.1. [rate+mercuryo fees+partners fee](/Widget_API_Mercuryo_v1.6.md/#11-rate+mercuryo-fees+partners-fee)
  
-   1.2. [rate+mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#12-rate+mercuryo-fee)
+   1.2. [rate+mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#12-rate+mercuryo-fee)
  
-   1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#13-clear-exchange-rate)
+   1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#13-clear-exchange-rate)
  
-2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#2-get-transaction-status)
-3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#3-get-final-crypto-buy-or-fiat-sell-amounts)
+2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#2-get-transaction-status)
+3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#3-get-final-crypto-buy-or-fiat-sell-amounts)
 
-   3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#31-buy)
+   3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#31-buy)
 
-   3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#32-sell)
-4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#4-get-the-list-of-supported-fiat-or-crypto-currencies)
-5. [Get min/max limits](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#5-get-min/max-limits)
+   3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#32-sell)
+4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#4-get-the-list-of-supported-fiat-or-crypto-currencies)
+5. [Get min/max limits](/Widget_API_Mercuryo_v1.6.md/#5-get-min/max-limits)
 
-   5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#51-buy)
+   5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#51-buy)
 
-   5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#52-sell)
+   5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#52-sell)
   
-6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#4-api-methods/#6-get-list-of-supported-countries)
+6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#6-get-list-of-supported-countries)
 
 			
 #### 1. Get rates
