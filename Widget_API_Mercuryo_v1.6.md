@@ -220,7 +220,6 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
    4.1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
  
    4.1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
- 
 4.2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
 4.3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
@@ -233,10 +232,10 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
    4.5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
 
    4.5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
-  
 4.6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
 
-			
+****
+
 #### 4.1. Get rates
 
 ##### 4.1.1 rate mercuryo fees partners fee
