@@ -31,9 +31,9 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 #### 1.1. Get parameters
 
-1. For integrate Mercuryo to your own platform use [**iframe**](https://demo-widget.mercuryo.io)
+1. To integrate Mercuryo to your own platform use [**iframe**](https://demo-widget.mercuryo.io)
 
-2. For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partner get the comissions as with iframe.
+2. For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions as with iframe.
 
 #### 1.2. Get a dashboard	
 [Partners admin](https://partners.mercuryo.io)  
@@ -42,11 +42,11 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 | Section  | Description  | 
 | ------------- | -------------  |
-| Dashboard | page with information abou transactions, also you can add widget by tap on <Add widget> button |
+| Dashboard | page with transaction information, also you can add widget by tapping on the <Add widget> button |
 | Profile | you can set up your comission and change password |	
 | My widgets | list of widgets |
-| Widget callbacks | list of callbacks. You can send test callback from this page |
-| Reports | log of Transactions, Referrals or Referrals Withdraw. You need to choose one of them to find the information|
+| Widget callbacks | list of callbacks; you can send test callback from this page |
+| Reports | log of Transactions, Referrals or Referrals Withdraw; choose one of them to find the information |
 
 #### 1.3 Set up a widget
 **My widgets → Create Partner Widget**
@@ -57,13 +57,13 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 | ------------- | -------------  |
 | Name | your widget name |
 | Domain |  if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address) 
- **Note:** Please make sure, there are no symbols or backspace after `https://domain.io` if you choose Redirect or after `https://yourdomain.com` if you choose iFrame, otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
+ **Note:** Note: Please make sure there are no symbols or backspace after `https://domain.io` if you choose Redirect, or after `https://yourdomain.com` if you choose iFrame; otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
 | Alias | transfer your widget id to your widget alias |
-| Backward URL | merchant URL to which the users will return from Redirect|
-| Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo’s updates status of a transaction| 
+| Backward URL | merchant URL where the users will return to from Redirect |
+| Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo updates transaction status | 
 | Sign Key | Callbacks signature check |
 | Check signature  checkbox | enable or disable signature verification |
-|  Secret Key | your secret key for your signature verification |
+| Secret Key | your secret key for your signature verification |
 | Is Active checkbox | it shows your is widget  active or not |
 
 ***
@@ -73,13 +73,13 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 These webhooks allow you to get current transaction status and include all the data.
 
-1.  Set-up automatic webhooks to your server in a dashboard (`Callback URL`)  
+1.  Set up automatic webhooks to your server in a dashboard (`Callback URL`)  
 2.  Before creating an order you should create a unique ID (max size 255 characters).
 3.  Set the generated ID into the `merchantTransactionId` parameter (in let `widgetParams`) or in the URL parameter `merchant_transaction_id`.
 
 `widget_id` &ndash; partners widget ID
 
-`merchant_transaction_id` &ndash; generated unique ID by a partner, that was created in step 2	
+`merchant_transaction_id` &ndash; generated unique transaction ID by a partner	
 
 #### 2.1. Callbacks signature check
 
@@ -87,7 +87,7 @@ These webhooks allow you to get current transaction status and include all the d
 
 When the status of a transaction changes, the partner receives a request with transaction data from Mercuryo. 
 
-You can set-up a signature check and see the `X-Signature` HTTP header with a signature. 
+You can set up a signature check and see the `X-Signature` HTTP header with a signature. 
 
 You can generate a key here, for [example](https://implode.io/)
 
@@ -142,14 +142,14 @@ In this case, the request body must not change.
 | Parameter  | Description  | 
 | ------------- | -------------  |
 | `id` | unique ID of the current event |
-| `number` | last 4 numbers of card number  |
+| `number` | last 4 numbers of a card  |
 | `id` | blockchain transaction id |
 | `type` | transaction type |
 | `uuid4` | unique user ID |
-| `country_code` | code of users country |
-| `amount` | crypro amount |
+| `country_code` | code of user's country |
+| `amount` | amount of crypto |
 | `status` | transaction status |
-| `currency` | crypto currency |
+| `currency` | cryptocurrency |
 | `created_at` | date of start |
 | `updated_at` | date of last update |
 | `fiat_currency` | fiat currency |
@@ -164,18 +164,18 @@ In this case, the request body must not change.
 ### 3. Transaction status types 
 
 #### 3.1. BUY
-Per 1 transaction there are two internal operations "buy" and "withdraw"
+There are two internal operations "buy" and "withdraw" per 1 transaction
 
 **Type: `buy`**
 
 | Status  | Description  | 
 | ------------- | -------------  |
 | `new` | transaction initiated |
-| `pending` | waiting for any action from the user to continue the transaction (waiting for input 3ds or descriptor) |
+| `pending` | waiting for any action from the user to continue the transaction (waiting for 3ds input or descriptor) |
 | `cancelled` | transaction cancelled (usually due to timeout of descriptor or 3ds) |
 | `paid` | transaction completed successfully (money debited from the card) |
 | `order_failed` | transaction was rejected by the issuer bank |
-| `order_scheduled` | transaction is successful, the money is held up/frozen on the card by the bank, we are waiting for the client to pass KYC. As soon as the client passes KYC - crypto is sent to the address, if the client fails KYC - transaction is canceled within 1 hours, client’s bank returns money back to card.|
+| `order_scheduled` | transaction is successful, the money is held off/frozen on the card by the bank, we are waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
 |`descriptor_failed` | the user entered an invalid descriptor three times |
 
 **Type: `withdraw`**
@@ -184,12 +184,12 @@ Per 1 transaction there are two internal operations "buy" and "withdraw"
 | ------------- | -------------  |
 | `new` | transaction initiated |
 | `pending` | transaction in progress |
-| `failed` | not completed successfully (this is rare) |
-| `completed` | successfully (received transaction hash) |
+| `failed` | completed unsuccessfully (this is rare) |
+| `completed` | successfully completed (received transaction hash) |
 
 #### 3.2. SELL
 
-Per 1 transaction there are two internal operations "deposit" and "sell"
+There are two internal operations "deposit" and "sell" per 1 transaction
 
 **Type:** `deposit`
 
@@ -198,7 +198,7 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
 | `new` | new deposit |
 | `pending`| deposit in progress |
 | `succeeded` | deposit is done |
-| `faild` | something gone wrong |
+| `failed` | something went wrong |
 
 **Type:** `sell`
 
@@ -226,7 +226,7 @@ Per 1 transaction there are two internal operations "deposit" and "sell"
    3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
 
    3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
-4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
+4. [Get the list of supported fiat or cryptocurrencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-cryptocurrencies)
 5. [Get min or max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min-or-max-limits)
 
      5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
@@ -380,7 +380,7 @@ Request:
 | from | your fiat |
 | to | your crypto |
 | type | transaction type |
-| ammount | fiat ammount |
+| amount | fiat amount |
 | widget_id | your widget id |
 
 Response example:
@@ -411,7 +411,7 @@ Request:
 | from | your fiat |
 | to | your crypto |
 | type | transaction type |
-| ammount | cpyrto ammount |
+| amount | cpyrto amount |
 | widget_id | your widget id |
 
 Response example:
@@ -440,7 +440,7 @@ Request:
 | ------------- | -------------  |
 | from | your fiat |
 | to | your crypto |
-| ammount | fiat ammount |
+| amount | fiat amount |
 | widget_id | your widget id |
 
 Response example:
@@ -473,13 +473,13 @@ Response example:
 ```
 ***
 
-#### 4.4. Get the list of supported fiat or crypto currencies
+#### 4.4. Get the list of supported fiat or cryptocurrencies
 
 1. **Buy**
 Request:
 `GET https://api.mercuryo.io/v1.6/public/currencies-buy`
 
-Pesponse example:
+Response example:
 ```
 {
     "status": 200,
@@ -618,16 +618,16 @@ Response example:
 ***
 ### 5. Signature Wallet Address
 
-To protect against forgery of the crypto-wallet address, you have to use a signature.
+TTo protect crypto-wallet address against forgery, you have to use a signature.
 
 On the dashboard, in the widget’s setting, there is a section where you can enable signature verification. 
 
-The partner sets Secret (automatically generated or manually) and sets the “Check signature“ checkbox.
+The partner sets Secret (automatically generated or manually) and checks the “Check signature“ box.
 
 
 ![img3](https://github.com/mercuryoio/api-migration-docs/blob/master/img3.png)
 
-When the checkbox is on, the signature and address parameters must be appended to the widget’s URL (the partner generates on its side and substitutes).
+When the checkbox is on, the signature and address parameters must be appended to the widget’s URL (the partner generates on their side and substitutes).
 
 Signature is calculated using the following algorithm:
 
@@ -652,7 +652,7 @@ Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string
 
 ### 6. TEST
 
-You should provide all your test personal/server ip’s for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
+You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
 
 How to use parameters
 
@@ -668,45 +668,45 @@ Make a call:
 
 | Parameters | Description  | 
 | ------------- | -------------  |
-| widgetId | widget Id (required) |
-| host | DOM element, container for the widget (required) |
-| width | width of widget’s iframe in CSS-compatible format |
-| height | height of widget’s iframe in CSS-compatible format |
-| type | fixed type of the operation. Possible values are 'buy' or 'sell'|
-| amount | amount of cryptocurrency |
-| fixAmount | prevent user from changing amount of cryptocurrency. Boolean |
-| currency | cryptocurrency ticker |
-| currencies | array of available cryptocurrencies |
-| fixCurrency | prevent user from changing cryptocurrency. Boolean |
-| fiatAmount | amount of fiat currency |
-| fixFiatAmount | prevent user from changing amount of fiat currency. Boolean |
-| fiatCurrency | fiat currency ticker |
-| fixFiatCurrency | prevent user from changing fiat currency. Boolean |
-| fiatCurrencies | array of available fiat currencies |
-| fiatCurrencyDefault | default fiat currency value |
-| ratesFeeOff | display currency rates without fees. Boolean |
-| address | wallet address for the predefined currency or BTC by default |
-| addressMap | JS object of wallets. Example: {BTC: '…', ETH: '…'} |
-| hideAddress | do not show wallet address in user interface. Boolean |
-| refundAddress | wallet address for the predefined currency or BTC by default. It is used for refund in sell |
-| refundAddressMap | JS object of wallets for refund in sell. Example: `{BTC: '…', ETH: '…'}` |
-| signature | wallet address signature |
-| countryCode – country code of user’s citizenship in ISO 3166-1 alpha-2 format. Example: 'ru' |
-| phone | phone number |
-| firstName | first name |
-| lastName | last name |
-| birthdate | date of birth in dd.mm.yyyy or dd/mm/yyyy format |
-| email | e-mail adress |
-| returnUrl | merchant’s URL to return to after transaction |
-| merchantTransactionId | merchant’s transaction id |
-| refCode | code for referral program |
-| face | photo of user’s face in base64 format |
-| passport | photo of user’s passport in base64 format |
-| idCardFront | photo of front side of user’s ID card in base64 format |
-| idCardBack | photo of back side of user’s ID card in base64 format |
-| lang | default language for user interface in ISO 639-1 format. Example: 'ru' |
-| theme | name of a custom CSS theme |
-| shareToken | SumSub share token |
+| `widgetId` | widget Id (required) |
+| `host` | DOM element, container for the widget (required) |
+| `width` | width of widget’s iframe in CSS-compatible format |
+| `height` | height of widget’s iframe in CSS-compatible format |
+| `type` | fixed type of the operation. Possible values are 'buy' or 'sell' |
+| `amount` | amount of cryptocurrency |
+| `fixAmount` | prevent user from changing amount of cryptocurrency. Boolean |
+| `currency` | cryptocurrency ticker |
+| `currencies` | array of available cryptocurrencies |
+| `fixCurrency` | prevent user from changing cryptocurrency. Boolean |
+| `fiatAmount` | amount of fiat currency |
+| `fixFiatAmount` | prevent user from changing amount of fiat currency. Boolean |
+| `fiatCurrency` | fiat currency ticker |
+| `fixFiatCurrency` | prevent user from changing fiat currency. Boolean |
+| `fiatCurrencies` | array of available fiat currencies |
+| `fiatCurrencyDefault` | default fiat currency value |
+| `ratesFeeOff` | display currency rates without fees. Boolean |
+| `address` | wallet address for the predefined currency or BTC by default. It is used for sell refunds |
+| `addressMap` | JS object of wallets. Example: {BTC: '…', ETH: '…'} |
+| `hideAddress` | do not show wallet address in user interface. Boolean |
+| `refundAddress` | wallet address for the predefined currency or BTC by default. It is used for sell refunds |
+| `refundAddressMap` | JS object of wallets for sell refunds. Example: `{BTC: '…', ETH: '…'}` |
+| `signature` | wallet address signature |
+| `countryCode` | country code of user’s citizenship in ISO 3166-1 alpha-2 format. Example: 'ru' |
+| `phone` | phone number |
+| `firstName` | first name |
+| `lastName` | last name |
+| `birthdate` | date of birth in dd.mm.yyyy or dd/mm/yyyy format |
+| `email` | e-mail adress |
+| `returnUrl` | merchant’s URL to return to after transaction |
+| `merchantTransactionId` | merchant’s transaction id |
+| `refCode` | code for referral program |
+| `face` | photo of user’s face in base64 format |
+| `passport` | photo of user’s passport in base64 format |
+| `idCardFront` | photo of front side of user’s ID card in base64 format |
+| `idCardBack` | photo of back side of user’s ID card in base64 format |
+| `lang` | default language for user interface in ISO 639-1 format. Example: 'ru' |
+| `theme` | name of a custom CSS theme |
+| `shareToken` | SumSub share token |
 
 Callbacks:
 1. onStatusChange - triggered each time the status of the purchase changes.
@@ -744,8 +744,8 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 | `address`	| Wallet address for the predefined currency or BTC by default |	`a8c1dead-ed5f-4740-b9ce-c4ea7721c93b` |
 | `address_map`	| Wallet address for the predefined currency or BTC by default	| `%7B%22BTC%22%3A%22a8c1dead-ed5f-4740-b9ce-c4ea7721c93b%22%7D (urlencoded JSON {"BTC":"a8c1dead-ed5f-4740-b9ce-c4ea7721c93b"})` |
 | `hide_address`	| Do not show wallet address in user interface |	`true` |
-| `refund_address`	| Wallet address for the predefined currency or BTC by default. It is used for refund in sell	| `a8c1dead-ed5f-4740-b9ce-c4ea7721c93b` |
-| `refund_address_map`	| JSON object of wallets for refund in sell	| `%7B%22BTC%22%3A%22a8c1dead-ed5f-4740-b9ce-c4ea7721c93b%22%7D (urlencoded JSON {"BTC":"a8c1dead-ed5f-4740-b9ce-c4ea7721c93b"})` |
+| `refund_address`	| Wallet address for the predefined currency or BTC by default. It is used for sell refunds | `a8c1dead-ed5f-4740-b9ce-c4ea7721c93b` |
+| `refund_address_map`	| JSON object of wallets for sell refunds	| `%7B%22BTC%22%3A%22a8c1dead-ed5f-4740-b9ce-c4ea7721c93b%22%7D (urlencoded JSON {"BTC":"a8c1dead-ed5f-4740-b9ce-c4ea7721c93b"})` |
 | `signature`	| Wallet address signature	| `cf23df2207d99a74fbe169e3eba035e633b65d94` |
 | `country_code`	| Country code of user’s citizenship in ISO 3166-1 alpha-2 format |	`ru` |
 | `phone` |	Phone number	| `79998887766` |
@@ -786,13 +786,13 @@ host: document.getElementById('mercuryo-widget')})
 </script>
 ```
 
- in the end of the page before `</body>`
+ at the end of the page `</body>`
  
 					
 test `widget_id=60b69ef8-9287-49d7-8164-94d87d8982c4` You can find how to get your own test widget in second paragraph 
 | Parameter name  | Description  | 
 | ------------- | -------------  |
-| phone | Phine number. You can use your own |
+| phone | Phone number. You can use your own |
 | email | E-mail adress. You can use your own |
 | bank card | Bank card number. You can use your own real visa/MasterCard bank cards for 3ds part (the fiat won't be charged and data won't be stored) |
 
