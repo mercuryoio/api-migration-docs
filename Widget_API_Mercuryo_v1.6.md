@@ -682,9 +682,9 @@ Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string
 You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
 
 Test Adresses:
-1. `https://sandbox-partners.mrcr.io` - test URL. You must use this as Domain
+1. `https://sandbox-partners.mrcr.io` - test URL. You must use this as ` Domain` 
 2. `https://sandbox-exchange.mrcr.io`  - test widget with redirection
-Exsmple:
+Example:
 `https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id`
 
 How to use parameters
