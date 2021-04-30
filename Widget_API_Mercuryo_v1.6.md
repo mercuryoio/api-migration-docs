@@ -23,6 +23,8 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
    6.1. [Mercuryo SANDBOX](/Widget_API_Mercuryo_v1.6.md/#61-mercuryo-sandbox)
  
    6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#62-check-test-transaction)
+
+7. [Errors](/Widget_API_Mercuryo_v1.6.md/#7-errors)
 	
 ***
 ***
