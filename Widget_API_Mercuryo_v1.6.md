@@ -411,6 +411,9 @@ Response example:
 Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=sell&amount=crypto_ammount&widget_id=your_widget_id`
 
+Example:
+`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.1&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+
 | Params | Description  | 
 | ------------- | -------------  |
 | from | your fiat |
@@ -440,6 +443,10 @@ Response example:
 ##### 4.3.3. buy rate
 Request:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
+
+Example:
+`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=USD&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+
 
 | Params | Description  | 
 | ------------- | -------------  |
