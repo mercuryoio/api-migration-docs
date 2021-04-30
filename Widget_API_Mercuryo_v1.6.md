@@ -112,19 +112,19 @@ In this case, the request body must not change.
        {
     "payload": {
         "data": {
-	"id": "user_id",
+	"id": "event_id",
         "card": {
               "number": "1111"
             },
 	"tx": {
 	    "id": "blockchain_transaction_id",
 	    "address": "blockchain_address"
-	},
+	    },
 	"type": "withdraw",
 	"user": {
-	    "uuid4": "mercuryo_user_uuid4,
+	    "uuid4": "mercuryo_user_uuid4",
 	    "country_code": "nz"
-	},
+	    },
 	"amount": "0.02833",
 	"status": "pending",
 	"currency": "ETH",
@@ -134,7 +134,6 @@ In this case, the request body must not change.
 	"created_at_ts": 1615320320,
 	"fiat_currency": "USD",
 	"updated_at_ts": 1615320320,
-	"id": "mercuryo_id",
 	"merchant_transaction_id": "merchant_transaction_id"
 	}
        }
@@ -859,3 +858,10 @@ test erc-20 address &ndash; `0xA14691F9f1F851bd0c20115Ec10B25FC174371DF`
 
 [**ETH**](https://ropsten.etherscan.io) ropsten, metamask
 
+### 7. Errors
+
+| Error code  | Description  | 
+| ------------- | -------------  |
+| 2xx | all is okay. The request was successfully received, understood, and accepted |
+| 4xx | most of them are a part of our normal flow, so all of those codes are coming from the backend and processed normally by our frontend. Don’t care much if you see any of those in your logs, as they don’t indicate any serious problem related with service |
+| 5xx | server errors. Mercuryo team have already seen them in monitor and already chasing the problem, this is normally resolved as quickly as possible, because it might affects all Mercuryo partners. So if you see that error was detected 3 days ago or even half day ago — 100% it’s fixed |
