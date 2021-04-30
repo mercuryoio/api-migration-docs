@@ -376,6 +376,10 @@ Response example:
 Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=fiat&to=crypto&type=buy&amount=fiat_ammount&widget_id=your_widget_id`
 
+Example:
+`GET https://api.mercuryo.io/v1.6/public/convert?from=EUR&to=BTC&type=buy&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+
+
 | Params | Description  | 
 | ------------- | -------------  |
 | from | your fiat |
@@ -677,7 +681,11 @@ Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string
 
 You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
 
-
+Test Adresses:
+1. `https://sandbox-partners.mrcr.io` - test URL. You must use this as Domain
+2. `https://sandbox-exchange.mrcr.io`  - test widget with redirection
+Exsmple:
+`https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id`
 
 How to use parameters
 
@@ -821,6 +829,13 @@ test `widget_id=60b69ef8-9287-49d7-8164-94d87d8982c4` You can find how to get yo
 | email | E-mail adress. You can use your own |
 | bank card | Bank card number. You can use your own real visa/MasterCard bank cards for 3ds part (the fiat won't be charged and data won't be stored) |
 
+You can use sadbox API:
+1. Add sadbox befor api
+2. Change mercuryo -> mrcr
+
+It must be like **sandbox**-api.**mrcr**.io/v1.6
+Example:
+`https://sandbox-api.mrcr.io/v1.6/public/currencies-buy`
 
 You can make your own test adresses in wallet. 
 
