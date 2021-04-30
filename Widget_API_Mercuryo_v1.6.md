@@ -233,6 +233,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 
      5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
 6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
+7. [Get the users country by IP](/Widget_API_Mercuryo_v1.6.md/#46-get-the-users-country-by-ip)
 
 ****
 
@@ -613,6 +614,28 @@ Response example:
         "and",
 	...
 ```
+#### 4.7. Get the users country by IP
+
+Request:
+`GET https://api.mercuryo.io/v1.6/public/data-by-ip?ip=user_ip` 
+
+| Parameters | Description  | 
+| ------------- | -------------  |
+| ip | users ip |
+
+Response example:
+```js
+{
+    "status": 200,
+    "data": {
+        "country": {
+            "code": "ru",
+            "phone_prefix": 7,
+            "enabled": true
+        }
+    }
+}
+```
 
 ***
 ***
@@ -653,6 +676,8 @@ Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string
 ### 6. TEST
 
 You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
+
+
 
 How to use parameters
 
@@ -767,7 +792,7 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 [Dashboard](https://sandbox-partners.mrcr.io) 
 
 **Redirect**
- You can open widgetto [Sandbox](https://sandbox-exchange.mrcr.io) 
+ You can open widget to [Sandbox](https://sandbox-exchange.mrcr.io) 
 
 **iframe**
 
