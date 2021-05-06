@@ -159,6 +159,22 @@ In this case, the request body must not change.
 | `updated_at_ts` | timestamp of last update |
 | `merchant_transaction_id` | merchant transaction id |
 
+
+#### 2.3. Test callbacks
+
+If you want to check the processing of the webhook, you can send a test callback.
+
+Follow this stepps:
+
+1. Go to **Widget Callbacks**
+2. Select the type of transaction on the **Transaction Type** field
+3. Select the status of the transaction on the **Transaction Status** field
+4. Select your widget on the **Widget Id** field
+5. Click on the **Send test callback** button
+
+[testcallbackimg](https://github.com/mercuryoio/api-migration-docs/blob/master/testcallbackimg.png)
+
+
 ***
 ***
 
