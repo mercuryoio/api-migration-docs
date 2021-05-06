@@ -12,11 +12,11 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
  
 2. [Webhooks](/Widget_API_Mercuryo_v1.6.md#2-webhooks)
 
-   2.1. [Callbacks signature check](/Widget_API_Mercuryo_v1.6.md#21-callbaks-signature-chek)
+   2.1. [Callbacks signature check](/Widget_API_Mercuryo_v1.6.md#21-callbacks-signature-check)
    
-   2.2. [Callbacks Response Body](/Widget_API_Mercuryo_v1.6.md#22-callbaks-response-body)
+   2.2. [Callbacks Response Body](/Widget_API_Mercuryo_v1.6.md#22-callbacks-response-body)
 
-   2.3. [Test callbacks](/Widget_API_Mercuryo_v1.6.md#23-test-callbaks)
+   2.3. [Test callbacks](/Widget_API_Mercuryo_v1.6.md#23-test-callbacks)
 
 
 3. [Transaction status types ](/Widget_API_Mercuryo_v1.6.md#3-transaction-status-types)
