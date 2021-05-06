@@ -11,11 +11,20 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
    1.3. [Set up a widget](/Widget_API_Mercuryo_v1.6.md/#13-set-up-a-widget)
  
 2. [Webhooks](/Widget_API_Mercuryo_v1.6.md#2-webhooks)
+
+   2.1. [Callbacks signature check](/Widget_API_Mercuryo_v1.6.md#21-callbaks-signature-chek)
+   
+   2.2. [Callbacks Response Body](/Widget_API_Mercuryo_v1.6.md#22-callbaks-response-body)
+
+   2.3. [Test callbacks](/Widget_API_Mercuryo_v1.6.md#23-test-callbaks)
+
+
 3. [Transaction status types ](/Widget_API_Mercuryo_v1.6.md#3-transaction-status-types)
 
    3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#31-buy)
 
    3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#32-sell)
+   
 4. [API METHODS](/Widget_API_Mercuryo_v1.6.md/#4-api-methods)
 5. [Signature Wallet Address](/Widget_API_Mercuryo_v1.6.md/#5-signature-wallet-address)
 6. [Test](/Widget_API_Mercuryo_v1.6.md/#6-test)
@@ -75,7 +84,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 These webhooks allow you to get current transaction status and include all the data.
 
-1.  Set up automatic webhooks to your server in a dashboard (`Callback URL`)  
+1.  Set up automatic webhooks to your server in a dashboard (`Callback URL`).  
 2.  Before creating an order you should create a unique ID (max size 255 characters).
 3.  Set the generated ID into the `merchantTransactionId` parameter (in let `widgetParams`) or in the URL parameter `merchant_transaction_id`.
 
@@ -669,7 +678,7 @@ Response example:
 ***
 ### 5. Signature Wallet Address
 
-TTo protect crypto-wallet address against forgery, you have to use a signature.
+To protect crypto-wallet address against forgery, you have to use a signature.
 
 On the dashboard, in the widget’s setting, there is a section where you can enable signature verification. 
 
@@ -706,8 +715,8 @@ Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string
 You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
 
 Test Adresses:
-1. `https://sandbox-partners.mrcr.io` - test URL. You must use this as ` Domain` 
-2. `https://sandbox-exchange.mrcr.io`  - test widget with redirection
+1. `https://sandbox-partners.mrcr.io` &ndash; test URL. You must use this as ` Domain` 
+2. `https://sandbox-exchange.mrcr.io`  &ndash; test widget with redirection
 Example:
 `https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id`
 
@@ -766,13 +775,13 @@ Make a call:
 | `shareToken` | SumSub share token |
 
 Callbacks:
-1. onStatusChange - triggered each time the status of the purchase changes.
+1. onStatusChange &ndash; triggered each time the status of the purchase changes.
 
 Example: `onStatusChange: data` => `console.log(data)`
 
 Example of the returned data:`{ amount: "0.01336", currency: "BTC", fiat_amount: "100", fiat_currency: "EUR", id: "03b22d25d523a5285", status: "paid" }`
 
-2 . onSellTransferEnabled - triggered during sell crypto scenario when user chooses sell flow variant and gets qr-code for money transferring.
+2 . onSellTransferEnabled &ndash; triggered during sell crypto scenario when user chooses sell flow variant and gets qr-code for money transferring.
 
 Example: `onSellTransferEnabled: data` => `console.log(data)`
 
@@ -883,3 +892,12 @@ test erc-20 address &ndash; `0xA14691F9f1F851bd0c20115Ec10B25FC174371DF`
 | 2xx | all is okay. The request was successfully received, understood, and accepted |
 | 4xx | most of them are a part of our normal flow, so all of those codes are coming from the backend and processed normally by our frontend. Don’t care much if you see any of those in your logs, as they don’t indicate any serious problem related with service |
 | 5xx | server errors. Mercuryo team have already seen them in monitor and already chasing the problem, this is normally resolved as quickly as possible, because it might affects all Mercuryo partners. So if you see that error was detected 3 days ago or even half day ago — 100% it’s fixed |
+
+**Most common cases of 4xx**
+
+| Error code  | Description  | 
+| ------------- | -------------  |
+| 400 | tor ip blocked, anti-fraud |
+| 401 | unauthorized, client token authentication timeout |
+| 403 | transaction lock failed. Bank was unable to charge/hold the amount &ndash; insufficient funds on card, incorrect 3ds code entered |
+
