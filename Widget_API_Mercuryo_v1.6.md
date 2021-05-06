@@ -181,7 +181,7 @@ Follow this steps:
 4. Select your widget on the **Widget Id** field
 5. Click on the **Send test callback** button
 
-[testcallbackimg](https://github.com/mercuryoio/api-migration-docs/blob/master/testcallbackimg.png)
+![testcallbackimg](https://github.com/mercuryoio/api-migration-docs/blob/master/testcallbackimg.png)
 
 
 ***
