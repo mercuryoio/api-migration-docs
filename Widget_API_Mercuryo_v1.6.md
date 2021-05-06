@@ -164,7 +164,7 @@ In this case, the request body must not change.
 
 If you want to check the processing of the webhook, you can send a test callback.
 
-Follow this stepps:
+Follow this steps:
 
 1. Go to **Widget Callbacks**
 2. Select the type of transaction on the **Transaction Type** field
