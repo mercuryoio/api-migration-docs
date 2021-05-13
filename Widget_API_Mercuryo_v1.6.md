@@ -112,6 +112,12 @@ return hash_hmac('sha256', $json, $key)
 
 The signature can be checked by generating a hash through HMAC algorithm sha256 of the request body (JSON request) and a key that is in the partner's dashboard in the Sign Key field.
 
+You can use [this](https://www.freeformatter.com/)
+
+Cryptography & Security -> HMAC Generator -> Fill the **Copy-paste the string here** field -> Fill the **Secret Key** field -> Select **SHA256** as message digest algorithm
+
+![img5](https://github.com/mercuryoio/api-migration-docs/blob/master/img5.png)
+
 In this case, the request body must not change.
 		
 
@@ -697,11 +703,6 @@ If the signature is invalid, the widget will not be displayed.
 
 For signature generation you can use [this](https://www.freeformatter.com/)
 
-Cryptography & Security -> HMAC Generator -> Fill the **Copy-paste the string here** field -> Fill the **Secret Key** field -> Select **SHA256** as message digest algorithm
-
-![img5](https://github.com/mercuryoio/api-migration-docs/blob/master/img5.png)
-
-**OR**
 
 Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string here** field
 
