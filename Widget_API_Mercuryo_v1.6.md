@@ -687,71 +687,6 @@ Example:
 
 How to use parameters
 
-[**demo-widget**](https://demo-widget.mercuryo.io)
-
-**Getting started**
-
-1. Place `<div id="mercuryo-widget"></div>` inside `<body></body>`
-2. Put `<script src="https://widget.mercuryo.io/embed.2.0.js"></script>` in the end of the page before `</body>`
-Make a call:
-`mercuryoWidget.run({ widgetId: 'a8c1dead-ed5f-4740-b9ce-c4ea7721c93b', host: document.getElementById('mercuryo-widget') });`
-`widgetId` and `host` are minimal required parameters. Below is a complete list of parameters:
-
-| Parameters | Description  | 
-| ------------- | -------------  |
-| `widgetId` | widget Id (required) |
-| `host` | DOM element, container for the widget (required) |
-| `type` | fixed type of the operation. Possible values are 'buy' or 'sell' |
-| `amount` | amount of cryptocurrency |
-| `fixAmount` | prevent user from changing amount of cryptocurrency. Boolean |
-| `currency` | cryptocurrency ticker |
-| `currencies` | array of available cryptocurrencies |
-| `fixCurrency` | prevent user from changing cryptocurrency. Boolean |
-| `fiatAmount` | amount of fiat currency |
-| `fixFiatAmount` | prevent user from changing amount of fiat currency. Boolean |
-| `fiatCurrency` | fiat currency ticker |
-| `fixFiatCurrency` | prevent user from changing fiat currency. Boolean |
-| `fiatCurrencies` | array of available fiat currencies |
-| `fiatCurrencyDefault` | default fiat currency value |
-| `ratesFeeOff` | display currency rates without fees. Boolean |
-| `address` | wallet address for the predefined currency or BTC by default. It is used for sell refunds |
-| `addressMap` | JS object of wallets. Example: {BTC: '…', ETH: '…'} |
-| `hideAddress` | do not show wallet address in user interface. Boolean |
-| `refundAddress` | wallet address for the predefined currency or BTC by default. It is used for sell refunds |
-| `refundAddressMap` | JS object of wallets for sell refunds. Example: `{BTC: '…', ETH: '…'}` |
-| `signature` | wallet address signature |
-| `countryCode` | country code of user’s citizenship in ISO 3166-1 alpha-2 format. Example: 'ru' |
-| `phone` | phone number |
-| `firstName` | first name |
-| `lastName` | last name |
-| `birthdate` | date of birth in dd.mm.yyyy or dd/mm/yyyy format |
-| `email` | e-mail adress |
-| `returnUrl` | merchant’s URL to return to after transaction |
-| `merchantTransactionId` | merchant’s transaction id |
-| `refCode` | code for referral program |
-| `face` | photo of user’s face in base64 format |
-| `passport` | photo of user’s passport in base64 format |
-| `idCardFront` | photo of front side of user’s ID card in base64 format |
-| `idCardBack` | photo of back side of user’s ID card in base64 format |
-| `lang` | default language for user interface in ISO 639-1 format. Example: 'ru' |
-| `theme` | name of a custom CSS theme |
-| `shareToken` | SumSub share token |
-
-Callbacks:
-1. onStatusChange &ndash; triggered each time the status of the purchase changes.
-
-Example: `onStatusChange: data` => `console.log(data)`
-
-Example of the returned data:`{ amount: "0.01336", currency: "BTC", fiat_amount: "100", fiat_currency: "EUR", id: "03b22d25d523a5285", status: "paid" }`
-
-2 . onSellTransferEnabled &ndash; triggered during sell crypto scenario when user chooses sell flow variant and gets qr-code for money transferring.
-
-Example: `onSellTransferEnabled: data` => `console.log(data)`
-
-Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04d3911f3b6de0843", id: "03b22d25d523a5285", flow_id: "payout" }`
-
-***
-
 [**redirect**](https://widget.mercuryo.io/docs.html)		
 
 | Parameter | Description | Example |
@@ -788,6 +723,19 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 | `lang`	 |Default language for user interface in ISO 639-1 format |	`ru` |
 | `theme` |	Name of a custom CSS theme |	`mercuryo` |
 | `share_token` |	SumSub share token |	`{token}` |
+	
+Callbacks:
+1. onStatusChange &ndash; triggered each time the status of the purchase changes.
+
+Example: `onStatusChange: data` => `console.log(data)`
+
+Example of the returned data:`{ amount: "0.01336", currency: "BTC", fiat_amount: "100", fiat_currency: "EUR", id: "03b22d25d523a5285", status: "paid" }`
+
+2 . onSellTransferEnabled &ndash; triggered during sell crypto scenario when user chooses sell flow variant and gets qr-code for money transferring.
+
+Example: `onSellTransferEnabled: data` => `console.log(data)`
+
+Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04d3911f3b6de0843", id: "03b22d25d523a5285", flow_id: "payout" }`
 
 *** 
 
