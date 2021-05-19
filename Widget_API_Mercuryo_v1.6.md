@@ -9,6 +9,8 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
    1.2. [Get a dashboard](/Widget_API_Mercuryo_v1.6.md/#12-get-a-dashboard)
  
    1.3. [Set up a widget](/Widget_API_Mercuryo_v1.6.md/#13-set-up-a-widget)
+   
+   1.4. [Widget general questions](/Widget_API_Mercuryo_v1.6.md/#14-widget-general-questions)
  
 2. [Webhooks](/Widget_API_Mercuryo_v1.6.md#2-webhooks)
 
@@ -42,9 +44,12 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 #### 1.1. Get parameters
 
-1. To integrate Mercuryo to your own platform use [**iframe**](https://demo-widget.mercuryo.io)
+1. For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions
 
-2. For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions as with iframe.
+[Example of filled parameters](https://exchange.mercuryo.io/?address=bc1q36rrq9e9pxn7vf7lg27zqxd882qjexh6gz5ffm&currency=BTC&fiat_amount=150&fiat_currency=USD&utm_medium=referral&utm_source=hoo&widget_id=fc502aa2-0338-453b-9e97-0ac0ffbbf2b4&merchant_transaction_id=70d9c9dd-0713-48e1-9185-0485ad3b19c3)
+
+![imgwidget](https://github.com/mercuryoio/api-migration-docs/blob/master/.png)
+
 
 #### 1.2. Get a dashboard	
 [Partners admin](https://partners.mercuryo.io)  
@@ -76,6 +81,13 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 | Check signature  checkbox | enable or disable signature verification |
 | Secret Key | your secret key for your signature verification |
 | Is Active checkbox | it shows your is widget  active or not |
+
+	
+#### 1.4 Widget general questions
+	
+1. [Mercuryo widget FAQ. Currencies, countires, limits, fees.](https://help.mercuryo.io/en/articles/4519473-mercuryo-widget-faq)
+	
+2. [How to buy crypto with Mercuryo widget.](https://help.mercuryo.io/en/articles/4359840-how-to-buy-crypto-with-mercuryo-widget)
 
 ***
 ***
@@ -245,13 +257,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 
 ### 4. API METHODS 
 
-1. [Get rates](/Widget_API_Mercuryo_v1.6.md/#1-api-methods/#41-get-rates)
-
-   1.1. [rate mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#411-rate-mercuryo-fees-partners-fee)
- 
-   1.2. [rate mercuryo fee](/Widget_API_Mercuryo_v1.6.md/#412-rate-mercuryo-fee)
- 
-   1.3. [clear exchange rate](/Widget_API_Mercuryo_v1.6.md/#413-clear-exchange-rate)
+1. [Get rates mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#1-api-methods/#41-get-rates-mercuryo-fees-partners-fee) 
 2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
 3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
@@ -268,10 +274,14 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 7. [Get the users country by IP](/Widget_API_Mercuryo_v1.6.md/#46-get-the-users-country-by-ip)
 
 ****
-
-#### 4.1. Get rates
-
-##### 4.1.1 rate mercuryo fees partners fee
+**Attention:**
+	
+1. Recommended RTS 1 request per 10 second.
+	
+2. We also need to whitelist your production IP’s to make sure that we receive requests right from you (Please connect your Mercuryo manager and send these IP’s).
+	
+****	
+#### 4.1. Get rates mercuryo fees partners fee
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/rates?widget_id=your_widget_id`
@@ -307,59 +317,6 @@ Response example:
                 "USD": "1.33240000",
                 "ZAR": "19.03699822"
             }, ...
-```
-
-
-##### 4.1.2 rate mercuryo fee
-
-Request:
-`GET https://api.mercuryo.io/v1.6/widget/rates/partner-fee-off?widget_id=your_widget_id`
-
-| Params | Description  | 
-| ------------- | -------------  |
-| widget_id | your widget id |
-
-Response example:
-
-```js
-{"status": 200,
-    "data": {
-        "buy": {
-            "BTC": {
-                "EUR": "45999.85280047",
-                "RUB": "4271678.76975651",
-                "USD": "55253.19777882",
-                "JPY": "6071645.41590771",
-                "TRY": "449074.90569426",
-                "GBP": "40221.37846708",
-                "UAH": "1576044.12923561"
-            }, ... 
-```
-
-##### 4.1.3 clear exchange rate
-
-Request:
-`GET https://api.mercuryo.io/v1.6/widget/rates/fee-off?widget_id=your_widget_id`
-
-| Params | Description  | 
-| ------------- | -------------  |
-| widget_id | your widget id |
-
-Response example:
-
-```js
-"status": 200,
-    "data": {
-        "buy": {
-            "BTC": {
-                "EUR": "45999.85280047",
-                "RUB": "4240882.10347752",
-                "USD": "55261.44188154",
-                "JPY": "6006006.00600600",
-                "TRY": "448933.78226711",
-                "GBP": "39758.42779273",
-                "UAH": "1563232.76535876"
-            },
 ```
 ***
 
@@ -407,9 +364,13 @@ Response example:
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=fiat&to=crypto&type=buy&amount=fiat_ammount&widget_id=your_widget_id`
+	OR
+`GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=buy&amount=crypto_ammount&widget_id=your_widget_id`
 
 Example:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=EUR&to=BTC&type=buy&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+	Or
+`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=buy&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
 
 | Params | Description  | 
@@ -442,9 +403,13 @@ Response example:
 
 Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=sell&amount=crypto_ammount&widget_id=your_widget_id`
-
+	Or
+`GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=sell&amount=crypto_ammount&widget_id=your_widget_id`
+	
 Example:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.1&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+	Or
+`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
 | Params | Description  | 
 | ------------- | -------------  |
