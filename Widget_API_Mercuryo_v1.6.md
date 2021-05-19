@@ -71,8 +71,8 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 | Section  | Description  | 
 | ------------- | -------------  |
 | Name | your widget name |
-| Domain |  if Redirect `https://domain.io`, if iFrame your domain address (without “/” at the end of the address) 
- **Note:** Note: Please make sure there are no symbols or backspace after `https://domain.io` if you choose Redirect, or after `https://yourdomain.com` if you choose iFrame; otherwise the widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
+| Domain |   `https://domain.io` 
+ **Note:** Note: Please make sure there are no symbols or backspace after `https://domain.io` The widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
 | Alias | transfer your widget id to your widget alias |
 | Backward URL | merchant URL where the users will return to from Redirect |
 | Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo updates transaction status | 
@@ -687,7 +687,7 @@ Example:
 
 How to use parameters
 
-[**iframe**](https://demo-widget.mercuryo.io)
+[**demo-widget**](https://demo-widget.mercuryo.io)
 
 **Getting started**
 
@@ -701,8 +701,6 @@ Make a call:
 | ------------- | -------------  |
 | `widgetId` | widget Id (required) |
 | `host` | DOM element, container for the widget (required) |
-| `width` | width of widget’s iframe in CSS-compatible format |
-| `height` | height of widget’s iframe in CSS-compatible format |
 | `type` | fixed type of the operation. Possible values are 'buy' or 'sell' |
 | `amount` | amount of cryptocurrency |
 | `fixAmount` | prevent user from changing amount of cryptocurrency. Boolean |
