@@ -1,6 +1,5 @@
 # Widget main info 
-Widget is the most convenient way to integrate with Mercuryo. There are two ways to integrate - redirect and iframe
-[FAQ](https://help.mercuryo.io/en/articles/4519473-mercuryo-widget-faq)
+Widget is the most convenient way to integrate with Mercuryo.
 
 1. [How to start](/Widget_API_Mercuryo_v1.6.md#1-how-to-start)
 
@@ -36,7 +35,6 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
    6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#62-check-test-transaction)
 
 7. [Errors](/Widget_API_Mercuryo_v1.6.md/#7-errors)
-8. [Sumsub shared token. Future feature](/Widget_API_Mercuryo_v1.6.md/#8-sumsub-shared-token-future-feature)
 	
 ***
 ***
@@ -45,7 +43,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
 
 #### 1.1. Get parameters
 
-1. For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions
+For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions
 
 [Example of filled parameters](https://exchange.mercuryo.io/?address=bc1q36rrq9e9pxn7vf7lg27zqxd882qjexh6gz5ffm&currency=BTC&fiat_amount=150&fiat_currency=USD&utm_medium=referral&utm_source=hoo&widget_id=fc502aa2-0338-453b-9e97-0ac0ffbbf2b4&merchant_transaction_id=70d9c9dd-0713-48e1-9185-0485ad3b19c3)
 
@@ -689,7 +687,7 @@ Example:
 
 How to use parameters
 
-[**demo-widget**](https://demo-widget.mercuryo.io)
+[**iframe**](https://demo-widget.mercuryo.io)
 
 **Getting started**
 
@@ -756,7 +754,7 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 
 ***
 
-[**widget**](https://widget.mercuryo.io/docs.html)		
+[**redirect**](https://widget.mercuryo.io/docs.html)		
 
 | Parameter | Description | Example |
 | ------------- | -------------  | -------------  |
@@ -802,33 +800,6 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 **Redirect**
  You can open widget to [Sandbox](https://sandbox-exchange.mrcr.io) 
 
-**iframe**
-
-1. Place `<div id="mercuryo-widget"></div>` inside `<body></body>`
- 
-2. Put to widget HTML
-```
-<script src="https://sandbox-widget.mrcr.io/embed.2.0.js"></script>
-
-<script>mercuryoWidget.run({widgetId: 
-
-da128a17-d019-41f4-b80c-a615d7e0f595 
-
-host: document.getElementById('mercuryo-widget')})
-
-</script>
-```
-
- at the end of the page `</body>`
- 
-					
-test `widget_id=60b69ef8-9287-49d7-8164-94d87d8982c4` You can find how to get your own test widget in second paragraph 
-| Parameter name  | Description  | 
-| ------------- | -------------  |
-| phone | Phone number. You can use your own |
-| email | E-mail adress. You can use your own |
-| bank card | Bank card number. You can use your own real visa/MasterCard bank cards for 3ds part (the fiat won't be charged and data won't be stored) |
-
 You can use sadbox API:
 1. Add sadbox befor api
 2. Change mercuryo -> mrcr
@@ -870,7 +841,7 @@ test erc-20 address &ndash; `0xA14691F9f1F851bd0c20115Ec10B25FC174371DF`
 
 ### 8. Sumsub shared token. Future feature
 
-Share Token allows SumSub to check partner databases for user identity and use it to pass over Mercuryo's KYC procedure. In this way, users don't have to verify their identities manually on Mercuryo side and undergo KYC twice.
+Share Token allows Mercuryo to check partner databases for user identity and use it to pass over Mercuryo's KYC procedure. In this way, users don't have to verify their identities manually on Mercuryo side and undergo KYC twice.
 
 1. [**What is shared token**](https://developers.sumsub.com/api-reference/#sharing-applicants-between-partner-services)
 
