@@ -36,6 +36,7 @@ Widget is the most convenient way to integrate with Mercuryo. There are two ways
    6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#62-check-test-transaction)
 
 7. [Errors](/Widget_API_Mercuryo_v1.6.md/#7-errors)
+8. [Sumsub shared token. Future feature](/Widget_API_Mercuryo_v1.6.md/#8-sumsub-shared-token.-future-feature)
 	
 ***
 ***
@@ -688,7 +689,7 @@ Example:
 
 How to use parameters
 
-[**iframe**](https://demo-widget.mercuryo.io)
+[**demo-widget**](https://demo-widget.mercuryo.io)
 
 **Getting started**
 
@@ -755,7 +756,7 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 
 ***
 
-[**redirect**](https://widget.mercuryo.io/docs.html)		
+[**widget**](https://widget.mercuryo.io/docs.html)		
 
 | Parameter | Description | Example |
 | ------------- | -------------  | -------------  |
