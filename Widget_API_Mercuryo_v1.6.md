@@ -867,3 +867,12 @@ test erc-20 address &ndash; `0xA14691F9f1F851bd0c20115Ec10B25FC174371DF`
 | 401 | unauthorized, client token authentication timeout |
 | 403 | transaction lock failed. Bank was unable to charge/hold the amount &ndash; insufficient funds on card, incorrect 3ds code entered |
 
+### 8. Sumsub shared token. Future feature
+
+Share Token allows SumSub to check partner databases for user identity and use it to pass over Mercuryo's KYC procedure. In this way, users don't have to verify their identities manually on Mercuryo side and undergo KYC twice.
+
+1. [**What is shared token**](https://developers.sumsub.com/api-reference/#sharing-applicants-between-partner-services)
+
+2. [**How it works**](https://youtu.be/DpGd8wy07RM)
+
+
