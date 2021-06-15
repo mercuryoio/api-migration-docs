@@ -101,7 +101,7 @@ These webhooks allow you to get current transaction status and include all the d
 
 `widget_id` &ndash; partners widget ID
 
-`merchant_transaction_id` &ndash; generated unique transaction ID by a partner	
+`merchant_transaction_id` &ndash; generated unique transaction ID by a partner. Must be unique for every transaction
 
 #### 2.1. Callbacks signature check
 
@@ -218,7 +218,6 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `cancelled` | transaction cancelled (usually due to timeout of descriptor or 3ds) |
 | `paid` | transaction completed successfully (money debited from the card) |
 | `order_failed` | transaction was rejected by the issuer bank |
-| `order_scheduled` | transaction is successful, the money is held off/frozen on the card by the bank, we are waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
 |`descriptor_failed` | the user entered an invalid descriptor three times |
 
 **Type: `withdraw`**
@@ -228,6 +227,7 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `new` | transaction initiated |
 | `pending` | transaction in progress |
 | `failed` | completed unsuccessfully (this is rare) |
+| `order_scheduled` | transaction is successful, the money is held off/frozen on the card by the bank, we are waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
 | `completed` | successfully completed (received transaction hash) |
 
 #### 3.2. SELL
@@ -257,7 +257,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 ### 4. API METHODS 
 
 1. [Get rates mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#1-api-methods/#41-get-rates-mercuryo-fees-partners-fee) 
-2. [Get transaction status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
+2. [Get transactions status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
 3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
    3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
@@ -319,15 +319,29 @@ Response example:
 ```
 ***
 
-#### 4.2. Get transaction status
+#### 4.2. Get transactions status
 
+**By transaction ID**	
+	
 Request:
-`GET https://api.mercuryo.io/v1.6/widget/transactions?widget_id=your_widget_id&merchant_transaction_id=your_id`
+`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&merchant_transaction_id=your_merchant_transaction_id`
 
 | Params | Description  | 
 | ------------- | -------------  |
 | widget_id | your widget id |
+| date start | date of the start of the period which you want get the status |
+| date end | date of the end of the period which you want get the status |
 | merchant_transaction_id | current merchant transaction id |
+	
+**By widget id**
+	
+`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date`
+	
+| Params | Description  | 
+| ------------- | -------------  |
+| widget_id | your widget id |
+| date start | date of the start of the period which you want get the status |
+| date end | date of the end of the period which you want get the status |
 
 Response example:
 
