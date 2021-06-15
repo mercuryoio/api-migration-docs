@@ -257,7 +257,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 ### 4. API METHODS 
 
 1. [Get rates mercuryo fees partners fee](/Widget_API_Mercuryo_v1.6.md/#1-api-methods/#41-get-rates-mercuryo-fees-partners-fee) 
-2. [Get transactions status](/Widget_API_Mercuryo_v1.6.md/#42-get-transaction-status)
+2. [Get transactions status](/Widget_API_Mercuryo_v1.6.md/#42-get-transactions-status)
 3. [Get final crypto *buy* or fiat *sell* amounts ](/Widget_API_Mercuryo_v1.6.md/#43-get-final-crypto-buy-or-fiat-sell-amounts)
 
    3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
