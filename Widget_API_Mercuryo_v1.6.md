@@ -377,13 +377,9 @@ Response example:
 
 Request:
 `GEThttps://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
-	OR
-`GET https://api.mercuryo.io/v1.6/public/buy/convert?from=crypto&to=fiat&type=buy&amount=crypto_ammount&widget_id=your_widget_id`
 
 Example:
-`GET https://api.mercuryo.io/v1.6/public/buy/convert?from=EUR&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
-	Or
-`GET https://api.mercuryo.io/v1.6/public/buy/convert?from=BTC&to=EUR&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
 
 | Params | Description  | 
@@ -765,6 +761,15 @@ You can use sadbox API:
 2. Change mercuryo -> mrcr
 
 It must be like **sandbox**-api.**mrcr**.io/v1.6
+
+Example test redirect widget:
+	
+`https://sandbox-exchange.mrcr.io/?widget_id=625376b4-cf28-43b8-b836-550cd558c431`
+
+`test widget_id` = `625376b4-cf28-43b8-b836-550cd558c431`
+
+Please use this `widget_id` when you try API methods in sandbox
+	
 Example:
 `https://sandbox-api.mrcr.io/v1.6/public/currencies-buy`
 
