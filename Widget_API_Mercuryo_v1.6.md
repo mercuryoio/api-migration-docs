@@ -45,7 +45,7 @@ Widget is the most convenient way to integrate with Mercuryo.
 
 For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions
 
-[Example of filled parameters](https://exchange.mercuryo.io/?address=bc1q36rrq9e9pxn7vf7lg27zqxd882qjexh6gz5ffm&currency=BTC&fiat_amount=150&fiat_currency=USD&utm_medium=referral&utm_source=hoo&widget_id=fc502aa2-0338-453b-9e97-0ac0ffbbf2b4&merchant_transaction_id=70d9c9dd-0713-48e1-9185-0485ad3b19c3)
+[Example of filled parameters](https://github.com/mercuryoio/api-migration-docs/blob/master/imgwidget.png)
 
 ![imgwidget](https://github.com/mercuryoio/api-migration-docs/blob/master/.png)
 
