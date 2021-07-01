@@ -682,7 +682,7 @@ If the signature is invalid, the widget will not be displayed.
 For signature generation you can use [this](https://www.freeformatter.com/)
 
 
-Cryptography & Security -> SHA-256 Generator -> Fill the **Copy-paste the string here** field
+Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string here** field
 
 ![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/img6.png)
 
