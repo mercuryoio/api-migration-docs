@@ -47,7 +47,7 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 
 [Example of filled parameters](https://github.com/mercuryoio/api-migration-docs/blob/master/imgwidget.png)
 
-![imgwidget](https://github.com/mercuryoio/api-migration-docs/blob/master/.png)
+![imgwidget](https://github.com/mercuryoio/api-migration-docs/blob/master/imgwidget.png)
 
 
 #### 1.2. Get a dashboard	
