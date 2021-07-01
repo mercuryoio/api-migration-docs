@@ -376,14 +376,14 @@ Response example:
 ##### 4.3.1. buy
 
 Request:
-`GET https://api.mercuryo.io/v1.6/public/convert?from=fiat&to=crypto&type=buy&amount=fiat_ammount&widget_id=your_widget_id`
+`GEThttps://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
 	OR
-`GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=buy&amount=crypto_ammount&widget_id=your_widget_id`
+`GET https://api.mercuryo.io/v1.6/public/buy/convert?from=crypto&to=fiat&type=buy&amount=crypto_ammount&widget_id=your_widget_id`
 
 Example:
-`GET https://api.mercuryo.io/v1.6/public/convert?from=EUR&to=BTC&type=buy&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/public/buy/convert?from=EUR&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 	Or
-`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=buy&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/public/buy/convert?from=BTC&to=EUR&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
 
 | Params | Description  | 
