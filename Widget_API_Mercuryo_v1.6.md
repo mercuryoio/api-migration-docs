@@ -376,7 +376,7 @@ Response example:
 ##### 4.3.1. buy
 
 Request:
-`GEThttps://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
+`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
 
 Example:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
@@ -491,8 +491,49 @@ Response example:
 ```
 ***
 
-#### 4.4. Get the list of supported fiat or cryptocurrencies
+#### 4.4. Get the list of supported fiat or crypto currencies
 
+	
+**Main method**
+Request:
+`GET https://api.mercuryo.io/v1.6/lib/currencies`	
+	
+Response example:
+```js
+	{
+	    "status": 200,
+    "data": {
+        "fiat": [
+            "EUR",
+            "RUB",
+            "USD",
+            "IDR",
+            "JPY",
+            "TRY",
+            "GBP",
+            "UAH",
+            "NGN",
+            "KES",
+            "ZAR",
+            "GHS",
+            "TZS",
+            "UGX",
+            "BRL"
+        ],
+        "crypto": [
+            "BTC",
+            "ETH",
+            "BAT",
+            "USDT",
+            "ALGO",
+            "TRX",
+            "OKB",
+            "BCH",
+            "DAI",
+            "EGLD"
+        ], ...
+}
+```	
 1. **Buy**
 Request:
 `GET https://api.mercuryo.io/v1.6/public/currencies-buy`
