@@ -263,7 +263,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
    3.1 [buy](/Widget_API_Mercuryo_v1.6.md/#431-buy)
 
    3.2 [sell](/Widget_API_Mercuryo_v1.6.md/#432-sell)
-4. [Get the list of supported fiat or cryptocurrencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-cryptocurrencies)
+4. [Get the list of supported fiat or crypto currencies](/Widget_API_Mercuryo_v1.6.md/#44-get-the-list-of-supported-fiat-or-crypto-currencies)
 5. [Get min or max limits](/Widget_API_Mercuryo_v1.6.md/#45-get-min-or-max-limits)
 
      5.1 [buy](/Widget_API_Mercuryo_v1.6.md/#451-buy)
