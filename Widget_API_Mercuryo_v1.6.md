@@ -179,7 +179,7 @@ In this case, the request body must not change.
 | `currency` | cryptocurrency |
 | `created_at` | date of start |
 | `updated_at` | date of last update |
-| `fiat_currency` | fiat currency |
+| `fiat_ammount` | amount of fiat|
 | `created_at_ts` | timestamp of creation |
 | `fiat_currency` | code of fiat currency |
 | `updated_at_ts` | timestamp of last update |
