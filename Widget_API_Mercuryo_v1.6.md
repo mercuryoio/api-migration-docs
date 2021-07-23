@@ -391,7 +391,7 @@ Request example:
 **You get last 50 transaction as response by default. You need to use parameter offset if you want to see previous transactions:**
 
 | Params | Description |
-| ------------- |
+| ------------- | ------------- |
 | offset | the numerical value of the shift  | 
 | limit | limint of rows `max: 50`, `default: 50` |
 	
