@@ -334,7 +334,8 @@ Request:
 | merchant_transaction_id | current merchant transaction id |
 	
 **By widget id**
-	
+
+Request:	
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date`
 	
 | Params | Description  | 
@@ -369,6 +370,37 @@ Response example:
         },
 	...
 ```
+**Also you can sort transactions by their status:**
+	
+| Params |
+| ------------- |
+| paid |
+| cancelled |
+| failed |
+| order_scheduled |
+| descriptor_failed |
+
+Request:	
+`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&status=transaction_status`
+	
+You can use more then one status for search:
+
+Request example:	
+`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&status=paid,cancelled,failed`
+	
+**You get last 50 transaction as response by default. You need to use parameter offset if you want to see previous transactions:**
+
+| Params | Description |
+| ------------- |
+| offset | the numerical value of the shift  | 
+| limit | limint of rows `max: 50`, `default: 50` |
+	
+Request example:	
+`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&offset=10&limit=20`
+	
+Transactions from number 11 to number 31 will be shown instead of from 1 to 50 as default. 
+
+
 *** 
 
 #### 4.3. Get final crypto *buy* or fiat *sell* amounts
