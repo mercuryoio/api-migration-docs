@@ -454,8 +454,8 @@ Example:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| from | your fiat |
-| to | your crypto |
+| from | crypto type |
+| to | fiat type |
 | type | transaction type |
 | amount | cpyrto amount |
 | widget_id | your widget id |
