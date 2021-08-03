@@ -46,7 +46,7 @@ Responses:
 
 For users that have not Mercuryo account you need to use this API method:
 
-Request: `POST https://api.mercuryo.io/v1.6/token/sign-up`
+Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/sign-up`
 
 
 | Header  | Type  |  
