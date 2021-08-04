@@ -17,7 +17,7 @@ Widget is the most convenient way to integrate with Mercuryo.
    
    2.2. [Callbacks Response Body](/Widget_API_Mercuryo_v1.6.md#22-callbacks-response-body)
    
-   2.3. [Function onSellTransferEnabled](/Widget_API_Mercuryo_v1.6.md#23-function-onselltransferenable)
+   2.3. [Function onSellTransferEnabled](/Widget_API_Mercuryo_v1.6.md#23-function-onselltransferenabled)
 
    2.4. [Test callbacks](/Widget_API_Mercuryo_v1.6.md#24-test-callbacks)
 
