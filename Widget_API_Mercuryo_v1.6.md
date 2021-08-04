@@ -16,8 +16,10 @@ Widget is the most convenient way to integrate with Mercuryo.
    2.1. [Callbacks signature check](/Widget_API_Mercuryo_v1.6.md#21-callbacks-signature-check)
    
    2.2. [Callbacks Response Body](/Widget_API_Mercuryo_v1.6.md#22-callbacks-response-body)
+   
+   2.3. [Function onSellTransferEnabled](/Widget_API_Mercuryo_v1.6.md#23-function-onselltransferenable)
 
-   2.3. [Test callbacks](/Widget_API_Mercuryo_v1.6.md#23-test-callbacks)
+   2.4. [Test callbacks](/Widget_API_Mercuryo_v1.6.md#24-test-callbacks)
 
 
 3. [Transaction status types ](/Widget_API_Mercuryo_v1.6.md#3-transaction-status-types)
@@ -186,7 +188,25 @@ In this case, the request body must not change.
 | `merchant_transaction_id` | merchant transaction id |
 
 
-#### 2.3. Test callbacks
+#### 2.3. Function onSellTransferEnabled
+
+When user wants to sell crypto he needs to choose what to do if the crypto rate will change more than 5% during the selling. There are two options
+1. payout
+2. refund
+	
+When he has made his choice and get the blockchain address this callback is called
+	
+Parameters:
+
+| Parameter  | Description  | 
+| ------------- | -------------  |
+| `address` | blockchain adress |
+| `amount` | amount of crypto |
+| `currency` | cryptocurrency |
+| `id` | blockchain transaction id |
+| `flow_id` | `payout` or `refund` based on users choice |
+	
+#### 2.4. Test callbacks
 
 If you want to check the processing of the webhook, you can send a test callback.
 
