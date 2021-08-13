@@ -25,7 +25,7 @@ Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/login`
 | Header  | Type  |  
 | ------------- | -------------  |
 | Sdk-Partner-Token | your partner key |
-| Parameter  | Description  | 
+| **Parameter**  | **Description**  | 
 | ------------- | -------------  |
 | `phone` | users phone number |
 
@@ -52,7 +52,7 @@ Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/sign-up`
 | Header  | Type  |  
 | ------------- | -------------  |
 | Sdk-Partner-Token | obligatory |
-| Parameter  | Type  | 
+| **Parameter**  | **Type**  | 
 | ------------- | ------------- |
 | **User data:**   |
 | accept | obligatory | 
