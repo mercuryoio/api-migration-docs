@@ -752,6 +752,8 @@ Response example:
 ### 5. Signature Wallet Address
 
 To protect crypto-wallet address against forgery, you have to use a signature.
+	
+You need to use `address` as a parameter like this: https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id&address=blockchain_adress`
 
 On the dashboard, in the widget’s setting, there is a section where you can enable signature verification. 
 
@@ -764,9 +766,9 @@ When the checkbox is on, the signature and address parameters must be appended t
 
 Signature is calculated using the following algorithm:
 
-signature = sha512(address+secret), where + concatenation operation.
-
-If the signature is invalid, the widget will not be displayed.
+signature = sha512(address+secret), whirhout spase between `address` and `secret`
+	
+The Validation is on the step `Pay with card`. If the signature is invalid, the widget is displayed, but user cannot complete the operation. In this case error `Signature is invalid` will be shown to user.
 
 For signature generation you can use [this](https://www.freeformatter.com/)
 
@@ -774,6 +776,10 @@ For signature generation you can use [this](https://www.freeformatter.com/)
 Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string here** field
 
 ![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/img7.png)
+	
+**Example link:**
+	
+`https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id&address=blockchain_adress&signature=user_generated_signature`
 
 ***
 ***
