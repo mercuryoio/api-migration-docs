@@ -97,7 +97,7 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 
 These webhooks allow you to get current transaction status and include all the data.
 
-1.  Set up automatic webhooks to your server in a dashboard (`Callback URL`).  
+1.  Set up automatic webhooks to your server in a dashboard (`Callback URL`).  This is obligatory.
 2.  Before creating an order you should create a unique ID (max size 255 characters).
 3.  Set the generated ID into the `merchantTransactionId` parameter (in let `widgetParams`) or in the URL parameter `merchant_transaction_id`.
 
