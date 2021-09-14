@@ -113,17 +113,7 @@ When the status of a transaction changes, the partner receives a request with tr
 
 You can set up a signature check and see the `X-Signature` HTTP header with a signature. 
 
-You can generate a key here, for [example](https://implode.io/)
-
-``` 
-$key = '...';
-
-$json = '{...}';
-
-return hash_hmac('sha256', $json, $key) 
-```
-
-The signature can be checked by generating a hash through HMAC algorithm sha256 of the request body (JSON request) and a key that is in the partner's dashboard in the Sign Key field.
+The signature can be checked by generating a hash through HMAC algorithm sha256 of the request body (string request) and a key that is in the partner's dashboard in the Sign Key field.
 
 You can use [this](https://www.freeformatter.com/)
 
