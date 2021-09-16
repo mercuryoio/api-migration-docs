@@ -750,18 +750,17 @@ On the dashboard, in the widget’s setting, there is a section where you can en
 The partner sets Secret (automatically generated or manually) and checks the “Check signature“ box.
 
 
-![img3](https://github.com/mercuryoio/api-migration-docs/blob/master/img3.png)
-
-When the checkbox is on, the signature and address parameters must be appended to the widget’s URL (the partner generates on their side and substitutes).
+![img3](https://github.com/mercuryoio/api-migration-docs/blob/master/img8.jpg)
+	
+If you pass parameter `address` so parameter `signature` is obligatory too.
 
 Signature is calculated using the following algorithm:
 
-signature = sha512(address+secret), whirhout spase between `address` and `secret`
+signature = sha512(address+secret), whithout spase between `address` and `secret`. Sign key isn't required.
 	
 The Validation is on the step `Pay with card`. If the signature is invalid, the widget is displayed, but user cannot complete the operation. In this case error `Signature is invalid` will be shown to user.
 
 For signature generation you can use [this](https://www.freeformatter.com/)
-
 
 Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string here** field
 
