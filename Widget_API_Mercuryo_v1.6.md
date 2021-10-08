@@ -778,8 +778,8 @@ Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string
 You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
 
 Test Adresses:
-1. `https://sandbox-partners.mrcr.io` &ndash; test URL. You must use this as ` Domain` 
-2. `https://sandbox-exchange.mrcr.io`  &ndash; test widget with redirection
+1. `https://sandbox-partners.mrcr.io` &ndash; test URL
+2. `https://sandbox-exchange.mrcr.io`  &ndash; test widget with redirection. You must use this as `Domain`
 Example:
 `https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id`
 
@@ -892,7 +892,7 @@ test erc-20 address &ndash; `0xA14691F9f1F851bd0c20115Ec10B25FC174371DF`
 | 401 | unauthorized, client token authentication timeout |
 | 403 | transaction lock failed. Bank was unable to charge/hold the amount &ndash; insufficient funds on card, incorrect 3ds code entered |
 
-### 8. Sumsub shared token. Future feature
+### 8. Sumsub shared token.
 
 Share Token allows Mercuryo to check partner databases for user identity and use it to pass over Mercuryo's KYC procedure. In this way, users don't have to verify their identities manually on Mercuryo side and undergo KYC twice.
 
