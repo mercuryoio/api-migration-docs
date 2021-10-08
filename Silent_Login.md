@@ -33,13 +33,13 @@ Responses:
 
 | Case  | Code  |  Response  |
 | ------------- | -------------  |-------------  |
-| user is register by you | 200 | init_token and init_token_type |
-| user is register by other partner | 200 | init_token and init_token_type |
-| invalid phone | 400 |  unvalid phone |
-| user is bloked by reasons: `LOCK_REASON_TOO_MANY_LOGIN_FAILURES`, `LOCK_REASON_FRAUD`, `LOCK_REASON_REFUND`, `LOCK_REASON_TOO_MANY_REQUESTS`, `LOCK_REASON_SANCTION_LIST`   | 403 | silent login forbidden |
+| user is register by you | 200 | `init_token` and `init_token_type` |
+| user is register by other partner | 200 | `init_token` and `init_token_type` |
+| invalid phone | 400 |  invalid phone |
+| user is blocked by reasons: `LOCK_REASON_TOO_MANY_LOGIN_FAILURES`, `LOCK_REASON_FRAUD`, `LOCK_REASON_REFUND`, `LOCK_REASON_TOO_MANY_REQUESTS`, `LOCK_REASON_SANCTION_LIST`   | 403 | silent login forbidden |
 | user is deleted `LOCK_REASON_DELETED` | 403 | silent login forbidden |
 | invalid `sdk-partner-token` | 401 | wrong partner |
-| user is not registred | 404 | user not found |
+| user is not registered | 404 | user not found |
 
 
 2. **Silent SignUp**
