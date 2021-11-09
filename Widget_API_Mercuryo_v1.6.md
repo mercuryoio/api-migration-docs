@@ -45,7 +45,7 @@ Widget is the most convenient way to integrate with Mercuryo.
 
 #### 1.1. Get parameters
 
-For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get comissions
+For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo.io/docs.html). In this case partners get commissions
 
 [Example of filled parameters](https://github.com/mercuryoio/api-migration-docs/blob/master/imgwidget.png)
 
@@ -60,7 +60,7 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 | Section  | Description  | 
 | ------------- | -------------  |
 | Dashboard | page with transaction information, also you can add widget by tapping on the <Add widget> button |
-| Profile | you can set up your comission and change password |	
+| Profile | you can set up your commission and change password |	
 | My widgets | list of widgets |
 | Widget callbacks | list of callbacks; you can send test callback from this page |
 | Reports | log of Transactions, Referrals or Referrals Withdraw; choose one of them to find the information |
@@ -86,7 +86,7 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 	
 #### 1.4 Widget general questions
 	
-1. [Mercuryo widget FAQ. Currencies, countires, limits, fees.](https://help.mercuryo.io/en/articles/4519473-mercuryo-widget-faq)
+1. [Mercuryo widget FAQ. Currencies, countries, limits, fees.](https://help.mercuryo.io/en/articles/4519473-mercuryo-widget-faq)
 	
 2. [How to buy crypto with Mercuryo widget.](https://help.mercuryo.io/en/articles/4359840-how-to-buy-crypto-with-mercuryo-widget)
 
@@ -180,7 +180,7 @@ In this case, the request body must not change.
 
 #### 2.3. Function onSellTransferEnabled
 
-When user wants to sell crypto he needs to choose what to do if the crypto rate will change more than 5% during the selling. There are two options
+When the User wants to sell crypto he needs to choose what to do if the crypto rate will change more than 5% during the selling. There are two options
 1. `payout`
 2. `refund`
 	
@@ -190,7 +190,7 @@ Parameters:
 
 | Parameter  | Description  | 
 | ------------- | -------------  |
-| `address` | blockchain adress |
+| `address` | blockchain address |
 | `amount` | amount of crypto |
 | `currency` | cryptocurrency |
 | `id` | blockchain transaction id |
@@ -237,7 +237,7 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `new` | transaction initiated |
 | `pending` | transaction in progress |
 | `failed` | completed unsuccessfully (this is rare) |
-| `order_scheduled` | transaction is successful, the money is held off/frozen on the card by the bank, Mercuryo is waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
+| `order_scheduled` | the transaction is successful, the money is held off/frozen on the card by the bank, Mercuryo is waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
 | `completed` | successfully completed (received transaction hash) |
 
 #### 3.2. SELL
@@ -287,7 +287,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 	
 1. Recommended RTS 1 request per 10 second.
 	
-2. Mercuryo also need to whitelist your production IP’s to make sure that Mercuryo receive requests right from you (Please connect your Mercuryo manager and send these IP’s).
+2. Mercuryo also needs to whitelist your production IP’s to make sure that Mercuryo receive requests right from you (Please connect your Mercuryo manager and send these IP’s).
 	
 ****	
 #### 4.1. Get rates mercuryo fees partners fee
@@ -398,12 +398,12 @@ You can use more then one status for search:
 Request example:	
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&status=paid,cancelled,failed`
 	
-**You get last 50 transaction as response by default. You need to use parameter offset if you want to see previous transactions:**
+**You get the last 50 transaction as a response by default. You need to use parameter offset if you want to see previous transactions:**
 
 | Params | Description |
 | ------------- | ------------- |
 | `offset` | the numerical value of the shift  | 
-| `limit` | limint of rows `max: 50`, `default: 50` |
+| `limit` | limit of rows `max: 50`, `default: 50` |
 	
 Request example:	
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&offset=10&limit=20`
@@ -741,7 +741,7 @@ Response example:
 ***
 ### 5. Signature Wallet Address
 
-To protect crypto-wallet address against forgery, you have to use a signature.
+To protect a crypto-wallet address against forgery, you have to use a signature.
 	
 You need to use `address` as a parameter like this: https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id&address=blockchain_adress`
 
@@ -756,9 +756,9 @@ If you pass parameter `address` so parameter `signature` is obligatory too.
 
 Signature is calculated using the following algorithm:
 
-signature = sha512(address+secret), whithout space between `address` and `secret`. Sign key isn't required.
+signature = sha512(address+secret), without space between `address` and `secret`. Sign key isn't required.
 	
-The Validation is on the step `Pay with card`. If the signature is invalid, the widget is displayed, but user cannot complete the operation. In this case error `Signature is invalid` will be shown to user.
+The Validation is on the step `Pay with card`. If the signature is invalid, the widget is displayed, but the User cannot complete the operation. In this case the error `Signature is invalid` will be shown to the User.
 
 For signature generation you can use [this](https://www.freeformatter.com/)
 
@@ -777,7 +777,7 @@ Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string
 
 You should provide all your test personal/server IPs for whitelist to use Mercuryo’s sandbox. Contact your Mercuryo manager for it
 
-Test Adresses:
+Test Addresses:
 1. `https://sandbox-partners.mrcr.io` &ndash; test URL
 2. `https://sandbox-exchange.mrcr.io`  &ndash; test widget with redirection. You must use this as `Domain`
 Example:
@@ -844,9 +844,9 @@ Example of the returned data:`{ amount: "0.01336", currency: "BTC", address: "04
 **Redirect**
  You can open widget to [Sandbox](https://sandbox-exchange.mrcr.io) 
 
-You can use sadbox API:
-1. Add sadbox befor api
-2. Change mercuryo -> mrcr
+You can use sandbox API:
+1. Add sandbox before `api`
+2. Change `mercuryo` -> `mrcr`
 
 It must be like **sandbox**-api.**mrcr**.io/v1.6
 
@@ -861,7 +861,7 @@ Please use this `widget_id` when you try API methods in sandbox
 Example:
 `https://sandbox-api.mrcr.io/v1.6/public/currencies-buy`
 
-You can make your own test adresses in wallet. 
+You can make your own test addresses in the wallet. 
 
 Here are examples of the test addresses:
 
@@ -882,7 +882,7 @@ test erc-20 address &ndash; `0xA14691F9f1F851bd0c20115Ec10B25FC174371DF`
 | ------------- | -------------  |
 | 2xx | all is okay. The request was successfully received, understood, and accepted |
 | 4xx | most of them are a part of our normal flow, so all of those codes are coming from the backend and processed normally by our frontend. Don’t care much if you see any of those in your logs, as they don’t indicate any serious problem related with service |
-| 5xx | server errors. Mercuryo team have already seen them in monitor and already chasing the problem, this is normally resolved as quickly as possible, because it might affects all Mercuryo partners. So if you see that error was detected 3 days ago or even half day ago — 100% it’s fixed |
+| 5xx | server errors. Mercuryo team has already seen them on monitor and is already chasing the problem. This is normally resolved as quickly as possible, because it might affect all Mercuryo partners. So if you see that error was detected 3 days ago or even half day ago — 100% it’s fixed |
 
 **Most common cases of 4xx**
 
