@@ -181,8 +181,8 @@ In this case, the request body must not change.
 #### 2.3. Function onSellTransferEnabled
 
 When user wants to sell crypto he needs to choose what to do if the crypto rate will change more than 5% during the selling. There are two options
-1. payout
-2. refund
+1. `payout`
+2. `refund`
 	
 When he has made his choice and get the blockchain address this callback is called
 	
@@ -228,7 +228,7 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `cancelled` | transaction cancelled (usually due to timeout of descriptor or 3ds) |
 | `paid` | transaction completed successfully (money debited from the card) |
 | `order_failed` | transaction was rejected by the issuer bank |
-|`descriptor_failed` | the user entered an invalid descriptor three times |
+| `descriptor_failed` | the user entered an invalid descriptor three times |
 
 **Type: `withdraw`**
 
@@ -338,10 +338,10 @@ Request:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| widget_id | your widget id |
-| date start | date of the start of the period which you want get the status |
-| date end | date of the end of the period which you want get the status |
-| merchant_transaction_id | current merchant transaction id |
+| `widget_id` | your widget id |
+| `date start` | date of the start of the period which you want get the status |
+| `date end` | date of the end of the period which you want get the status |
+| `merchant_transaction_id` | current merchant transaction id |
 	
 **By widget id**
 
@@ -350,9 +350,9 @@ Request:
 	
 | Params | Description  | 
 | ------------- | -------------  |
-| widget_id | your widget id |
-| date start | date of the start of the period which you want get the status |
-| date end | date of the end of the period which you want get the status |
+| `widget_id` | your widget id |
+| `date start` | date of the start of the period which you want get the status |
+| `date end` | date of the end of the period which you want get the status |
 
 Response example:
 
@@ -384,11 +384,11 @@ Response example:
 	
 | Params |
 | ------------- |
-| paid |
-| cancelled |
-| failed |
-| order_scheduled |
-| descriptor_failed |
+| `paid` |
+| `cancelled` |
+| `failed` |
+| `order_scheduled` |
+| `descriptor_failed` |
 
 Request:	
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&status=transaction_status`
@@ -402,8 +402,8 @@ Request example:
 
 | Params | Description |
 | ------------- | ------------- |
-| offset | the numerical value of the shift  | 
-| limit | limint of rows `max: 50`, `default: 50` |
+| `offset` | the numerical value of the shift  | 
+| `limit` | limint of rows `max: 50`, `default: 50` |
 	
 Request example:	
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&offset=10&limit=20`
@@ -426,11 +426,11 @@ Example:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| from | your fiat |
-| to | your crypto |
-| type | transaction type |
-| amount | fiat amount |
-| widget_id | your widget id |
+| `from` | your fiat |
+| `to` | your crypto |
+| `type` | transaction type |
+| `amount` | fiat amount |
+| `widget_id` | your widget id |
 
 Response example:
 
@@ -464,11 +464,11 @@ Example:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| from | crypto type |
-| to | fiat type |
-| type | transaction type |
-| amount | cpyrto amount |
-| widget_id | your widget id |
+| `from` | crypto type |
+| `to` | fiat type |
+| `type` | transaction type |
+| `amount` | cpyrto amount |
+| `widget_id` | your widget id |
 
 Response example:
 
@@ -498,10 +498,10 @@ Example:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| from | your fiat |
-| to | your crypto |
-| amount | fiat amount |
-| widget_id | your widget id |
+| `from` | your fiat |
+| `to` | your crypto |
+| `amount` | fiat amount |
+| `widget_id` | your widget id |
 
 Response example:
 
@@ -644,10 +644,10 @@ Request:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| from | fiat |
-| to | crypto |
-| widget_id | your widget id |
-| type | transaction type |
+| `from`` | fiat |
+| `to` | crypto |
+| `widget_id` | your widget id |
+| `type` | transaction type |
 
 Response example:
 ```js
@@ -675,10 +675,10 @@ Request:
 
 | Parameters | Description  | 
 | ------------- | -------------  |
-| from | fiat |
-| to | crypto |
-| widget_id | your widget id |
-| type | transaction type |
+| `from` | fiat |
+| `to` | crypto |
+| `widget_id` | your widget id |
+| `type` | transaction type |
 
 Response example:
 ```js
@@ -756,7 +756,7 @@ If you pass parameter `address` so parameter `signature` is obligatory too.
 
 Signature is calculated using the following algorithm:
 
-signature = sha512(address+secret), whithout spase between `address` and `secret`. Sign key isn't required.
+signature = sha512(address+secret), whithout space between `address` and `secret`. Sign key isn't required.
 	
 The Validation is on the step `Pay with card`. If the signature is invalid, the widget is displayed, but user cannot complete the operation. In this case error `Signature is invalid` will be shown to user.
 
@@ -764,7 +764,7 @@ For signature generation you can use [this](https://www.freeformatter.com/)
 
 Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string here** field
 
-![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/img7.png)
+![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/img9.png)
 	
 **Example link:**
 	
