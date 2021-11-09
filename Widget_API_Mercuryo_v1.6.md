@@ -297,7 +297,7 @@ Request:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| widget_id | your widget id |
+| `widget_id` | your widget id |
 
 Response example:
 ```js
@@ -644,7 +644,7 @@ Request:
 
 | Params | Description  | 
 | ------------- | -------------  |
-| `from`` | fiat |
+| `from` | fiat |
 | `to` | crypto |
 | `widget_id` | your widget id |
 | `type` | transaction type |
@@ -721,7 +721,7 @@ Request:
 
 | Parameters | Description  | 
 | ------------- | -------------  |
-| ip | users ip |
+| `ip` | users ip |
 
 Response example:
 ```js
