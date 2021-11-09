@@ -237,7 +237,7 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `new` | transaction initiated |
 | `pending` | transaction in progress |
 | `failed` | completed unsuccessfully (this is rare) |
-| `order_scheduled` | transaction is successful, the money is held off/frozen on the card by the bank, we are waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
+| `order_scheduled` | transaction is successful, the money is held off/frozen on the card by the bank, Mercuryo is waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
 | `completed` | successfully completed (received transaction hash) |
 
 #### 3.2. SELL
@@ -287,7 +287,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 	
 1. Recommended RTS 1 request per 10 second.
 	
-2. We also need to whitelist your production IP’s to make sure that we receive requests right from you (Please connect your Mercuryo manager and send these IP’s).
+2. Mercuryo also need to whitelist your production IP’s to make sure that Mercuryo receive requests right from you (Please connect your Mercuryo manager and send these IP’s).
 	
 ****	
 #### 4.1. Get rates mercuryo fees partners fee
