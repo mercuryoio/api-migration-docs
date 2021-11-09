@@ -295,7 +295,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 Request:
 `GET https://api.mercuryo.io/v1.6/public/rates?widget_id=your_widget_id`
 
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `widget_id` | your widget id |
 
@@ -336,7 +336,7 @@ Response example:
 Request:
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&merchant_transaction_id=your_merchant_transaction_id`
 
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `widget_id` | your widget id |
 | `date start` | date of the start of the period which you want get the status |
@@ -348,7 +348,7 @@ Request:
 Request:	
 `GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date`
 	
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `widget_id` | your widget id |
 | `date start` | date of the start of the period which you want get the status |
@@ -382,7 +382,7 @@ Response example:
 ```
 **Also you can sort transactions by their status:**
 	
-| Params |
+| Parameter |
 | ------------- |
 | `paid` |
 | `cancelled` |
@@ -400,7 +400,7 @@ Request example:
 	
 **You get the last 50 transaction as a response by default. You need to use parameter offset if you want to see previous transactions:**
 
-| Params | Description |
+| Parameter | Description |
 | ------------- | ------------- |
 | `offset` | the numerical value of the shift  | 
 | `limit` | limit of rows `max: 50`, `default: 50` |
@@ -424,7 +424,7 @@ Example:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
 
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `from` | your fiat |
 | `to` | your crypto |
@@ -462,7 +462,7 @@ Example:
 	Or
 `GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `from` | crypto type |
 | `to` | fiat type |
@@ -496,7 +496,7 @@ Example:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=USD&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
 
 
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `from` | your fiat |
 | `to` | your crypto |
@@ -642,7 +642,7 @@ Response example:
 Request:
 `GET https://api.mercuryo.io/v1.6/public/currency-limits?from=fiat&to=crypto&widget_id=your_widget_id&type=buy`
 
-| Params | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `from` | fiat |
 | `to` | crypto |
@@ -673,7 +673,7 @@ Response example:
 Request:
 `GET https://api.mercuryo.io/v1.6/public/currency-limits?from=fiat&to=crypto&widget_id=your_widget_id&type=sell`
 
-| Parameters | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `from` | fiat |
 | `to` | crypto |
@@ -719,7 +719,7 @@ Response example:
 Request:
 `GET https://api.mercuryo.io/v1.6/public/data-by-ip?ip=user_ip` 
 
-| Parameters | Description  | 
+| Parameter | Description  | 
 | ------------- | -------------  |
 | `ip` | users ip |
 
