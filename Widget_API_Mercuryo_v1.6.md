@@ -259,7 +259,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 | ------------- | -------------  |
 |`new` | transaction created |
 | `pending` | transaction in progress |
-| `succeeded` | successfully completed (money transferred to the card) |
+| `completed` | successfully completed (money transferred to the card) |
 | `failed` | not completed successfully (crypto is refunded to `refund_address`) |
 
 ***
