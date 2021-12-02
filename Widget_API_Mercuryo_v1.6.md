@@ -904,7 +904,7 @@ Share Token allows Mercuryo to check partner databases for user identity and use
 
 ### 8. Design.
 
-To customise Mercuryo widget follow the instruction [here](https://www.figma.com/file/NDsbB4owdvvD7T3EU9Ju4I/Customization?node-id=3%3A19)	
+To customise Mercuryo widget follow the instruction in figma [here](https://www.figma.com/file/NDsbB4owdvvD7T3EU9Ju4I/Customization?node-id=3%3A19).	
 
 To get Mercuryo fonts download this archive: [Mercuryo_fonts](https://github.com/mercuryoio/api-migration-docs/blob/master/design/Mercuryo_fonts.zip)
 
