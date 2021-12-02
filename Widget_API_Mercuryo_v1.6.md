@@ -37,6 +37,8 @@ Widget is the most convenient way to integrate with Mercuryo.
    6.2. [Check test transaction](/Widget_API_Mercuryo_v1.6.md/#62-check-test-transaction)
 
 7. [Errors](/Widget_API_Mercuryo_v1.6.md/#7-errors)
+8. [Sumsub shared token](/Widget_API_Mercuryo_v1.6.md/#8-sumsub-shared-token)
+9. [Design](/Widget_API_Mercuryo_v1.6.md/#8-design)
 	
 ***
 ***
@@ -900,4 +902,10 @@ Share Token allows Mercuryo to check partner databases for user identity and use
 
 2. [**How it works**](https://youtu.be/DpGd8wy07RM)
 
+### 8. Design.
 
+To customise Mercuryo widget follow the instruction [here](https://www.figma.com/file/NDsbB4owdvvD7T3EU9Ju4I/Customization?node-id=3%3A19)	
+
+To get Mercuryo fonts download this archive: [Mercuryo_fonts](https://github.com/mercuryoio/api-migration-docs/blob/master/design/Mercuryo_fonts.zip)
+
+To get Mercuryo logos download this archive: [Mercuryo_logos](https://github.com/mercuryoio/api-migration-docs/blob/master/design/Mercuryo_logos.zip)
