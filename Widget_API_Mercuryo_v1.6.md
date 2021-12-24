@@ -282,7 +282,8 @@ There are two internal operations "deposit" and "sell" per 1 transaction
 
      5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
 6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
-7. [Get the users country by IP](/Widget_API_Mercuryo_v1.6.md/#46-get-the-users-country-by-ip)
+7. [Get the users country by IP](/Widget_API_Mercuryo_v1.6.md/#47-get-the-users-country-by-ip)
+8. [Get fee min](/Widget_API_Mercuryo_v1.6.md/#48-get-fee-min)
 
 ****
 **Attention:**
@@ -336,7 +337,7 @@ Response example:
 **By transaction ID**	
 	
 Request:
-`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&merchant_transaction_id=your_merchant_transaction_id`
+`GET https://api.mercuryo.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&merchant_transaction_id=your_merchant_transaction_id`
 
 | Parameter | Description  | 
 | ------------- | -------------  |
@@ -348,7 +349,7 @@ Request:
 **By widget id**
 
 Request:	
-`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date`
+`GET https://api.mercuryo.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date`
 	
 | Parameter | Description  | 
 | ------------- | -------------  |
@@ -393,7 +394,7 @@ Response example:
 | `descriptor_failed` |
 
 Request:	
-`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&status=transaction_status`
+`GET https://api.mercuryo.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&status=transaction_status`
 	
 You can use more then one status for search:
 
@@ -408,7 +409,7 @@ Request example:
 | `limit` | limit of rows `max: 50`, `default: 50` |
 	
 Request example:	
-`GET https://api.mrcr.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&offset=10&limit=20`
+`GET https://api.mercuryo.io/v1.6/sdk-partner/transactions?widget_id=your_widget_id&date_start=date&date_end=date&offset=10&limit=20`
 	
 Transactions from number 11 to number 31 will be shown instead of from 1 to 50 as default. 
 
@@ -738,7 +739,50 @@ Response example:
     }
 }
 ```
+	
+#### 4.8. Get fee min
+	
+If you want to get fee min mannualy use this method
+	
+Request:
+`GET https://api.mercuryo.io/v1.6/public/data-by-ip?ip=user_ip` 
 
+| Parameter | Description  | 
+| ------------- | -------------  |
+| `widget_id` | your widget id |
+	
+Response example:
+```js
+{
+    {
+    "status": 200,
+    "data": {
+        "sell": {
+            "EUR": {
+                "fee_min": "4",
+                "currency": "EUR"
+            },
+            "USD": {
+                "fee_min": "4",
+                "currency": "USD"
+            }
+        } ,
+	 "buy": {
+            "ALGO": {
+                "fee_min": "0",
+                "currency": "EUR"
+            },
+            "BAT": {
+                "fee_min": "13",
+                "currency": "EUR"
+            },
+            "BCH": {
+                "fee_min": "0",
+                "currency": "EUR"
+            }...
+}
+```
+	
 ***
 ***
 ### 5. Signature Wallet Address
