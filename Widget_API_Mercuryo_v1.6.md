@@ -744,8 +744,8 @@ Response example:
 	
 If you want to get fee min mannualy use this method
 	
-Request:
-`GET https://api.mercuryo.io/v1.6/public/data-by-ip?ip=user_ip` 
+Request: 
+`GET https://api.mercuryo.io/v1.6/public/data-by-ip?ip=user_ip`
 
 | Parameter | Description  | 
 | ------------- | -------------  |
