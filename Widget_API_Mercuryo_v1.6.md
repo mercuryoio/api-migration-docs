@@ -239,7 +239,7 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `new` | transaction initiated |
 | `pending` | transaction in progress |
 | `failed` | completed unsuccessfully (this is rare) |
-| `order_scheduled` | the transaction is successful, the money is held off/frozen on the card by the bank, Mercuryo is waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour abd client’s bank will return money to the card.|
+| `order_scheduled` | the transaction is successful, the money is held off/frozen on the card by the bank, Mercuryo is waiting for the client to pass KYC. As soon as the client passes KYC crypto will be sent to the address, if the client fails KYC transaction will be canceled within 1 hour and client’s bank will return money to the card.|
 | `completed` | successfully completed (received transaction hash) |
 
 #### 3.2. SELL
