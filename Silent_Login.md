@@ -23,11 +23,6 @@ Common Rules:
 2. Disallowed (partner settings) parameters -> disallowed parameters are ignored
 3. Unacceptable parameters - unacceptable parameters are ignored  (ex. kyc:photos for US, kyc:photos without personal info…) 
 
-
-## 3. Scheme
-
-![scheme title](https://github.com/mercuryoio/api-migration-docs/blob/master/scheme.png)
-
 ## 4. API methods
 There is two API methods: one for users that already have mercuryo account and one for new ones.
 
