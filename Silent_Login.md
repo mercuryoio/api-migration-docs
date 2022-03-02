@@ -69,7 +69,7 @@ Witch data  is allowed for silent sign-up for this partner. Check it in partners
 
 * No `email` **AND** No `phone`, or 1 of the parameters is invalid -> error
 * `email` **OR** `phone` exists -> error
-* `email` is valid/`phone` is valid  *or* `email` is valid/No `phone` *or* No `email/`phone` is valid -> new user is created
+* `email` is valid/`phone` is valid  *or* `email` is valid/No `phone` *or* No `email`/`phone` is valid -> new user is created
 
 **3. Check kyc:photos + Personal information**
 
