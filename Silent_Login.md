@@ -105,3 +105,7 @@ You need follow this steps:
 
 **NB:**
 Mercuryos main contact type is **e-mail**
+
+## 6 Init token
+
+`init_token` expires after first time it was passed to widget or after 1 hour.
