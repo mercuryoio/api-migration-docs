@@ -53,7 +53,7 @@ Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/sign-up`
 
 Note:
 Email is obligatory in Mercuryo, that's why if you don't pass valid email - we will have to ask user during first login.
-All Mercuryo users have to go through 'Know your Customer' procedure. You can save your users from extra steps by passing valis SumSub share-token. 
+All Mercuryo users have to go through 'Know your Customer' procedure. You can save your users from extra steps by passing valis SumSub share_token. 
 
 
 | Header  | Type  |  
