@@ -1,37 +1,25 @@
 ## 1. Silent Login
 
 Silent login is a tool that makes login in Mercuryo easier for your users. 
+Contact Your account manager to agree on what user data is allowed to silent sign-up for your users. 
+
 
 ## 2. Acceptance: 
 
-1. You need to add to your Terms and Policy agreement to share user data with Mercuryo.
-2. You need to make an agreement with Mercuryo that Mercuryo will use the data for registration and will use it to third parties.
-3. You need to ask users to accept  the Mercurio term  in your interface.
-4. You need to check and set up settings in partner admin panel: witch data are is allowed for silent sign-up for you. 
+1. You need to add to your Terms and Policy an agreement of sharing data with Mercuryo.
+2. You need to make an agreement with Mercuryo aabout Mercuryo using data for registration and third parties.
+3. You need to ask users to accept Mercurio term in your interface by publishing them on Your site.
 
-### 3. Partners settings
-
-| Parameter  | Description  |  
-| ------------- | -------------  |
-| phone  | is users phone allowed for silent sign-up or not |
-| email | is users email allowed for silent sign-up or not |
-| kyc: share-token | is sharing token with SumSub allowed or not |
-| kyc: photos + personal information | are users photo and peronal information allowed to pass KYC |
-
-Common Rules: 
-1. Invalid params -> error
-2. Disallowed (partner settings) parameters -> disallowed parameters are ignored
-3. Unacceptable parameters - unacceptable parameters are ignored  (ex. kyc:photos for US, kyc:photos without personal info…) 
-
-## 4. API methods
+## 3. API methods
 There is two API methods: one for users that already have mercuryo account and one for new ones.
 
 ### 1. **Silent Login**
 
-For already registered in Mercuryo users you need to use this API method:
+For users already registered in Mercuryo use:
 
 Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/login`
 
+Note: Please use one and only one of available params
 
 | Header  | Type  |  
 | ------------- | -------------  |
@@ -39,6 +27,8 @@ Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/login`
 | **Parameter**  | **Description**  | 
 | ------------- | -------------  |
 | `phone` | users phone number |
+| `uuid` | id you got after using sign-up |
+| `email` | users email |
 
 Responses:
 
@@ -57,47 +47,13 @@ Responses:
 
 ### 2. **Silent SignUp**
 
-#### **Flow:**
-
-**1. Check partner settings:** 
-
-Witch data  is allowed for silent sign-up for this partner. Check it in partners admin panel. Unchecked params are ignored
-
-**2. Check contacts:**
-
-**Possible cases:**
-
-* No `email` **AND** No `phone`, or 1 of the parameters is invalid -> error
-* `email` **OR** `phone` exists -> error
-* `email` is valid/`phone` is valid  *or* `email` is valid/No `phone` *or* No `email`/`phone` is valid -> new user is created
-
-**3. Check kyc:photos + Personal information**
-
-**Possible cases:**
-
-* Personal information without kyc:photos is ignored
-* Kyc:photos without Personal information is ignored
-* Kyc:photos and kyc:share-token not empty -> error
-
-Otherwise set kyc status true without checking
-
-**4. Check country:**
-
-**NB:**
-
-For US user kyc:photos is ignored
-
-**5. Check kyc:share-token** 
-
-**Possible cases:**
-* SumSub didn’t accept kyc:share-token -> error
-* kyc:photos and kyc:share-token not empty -> error
-
-Otherwise set kyc status from SumSub
-
-For users that have not Mercuryo account you need to use this API method:
+For users that have no Mercuryo account use:
 
 Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/sign-up`
+
+Note:
+Email is obligatory in Mercuryo, that's why if you don't pass valid email - we will have to ask user during first login.
+All Mercuryo users have to go through 'Know your Customer' procedure. You can save your users from extra steps by passing valis SumSub share-token. 
 
 
 | Header  | Type  |  
@@ -107,8 +63,10 @@ Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/sign-up`
 | ------------- | ------------- |
 | **User data:**   |
 | accept | obligatory | 
-| phone | obligatory |  
+| phone | optional |  
 | email | optional |
+| share-token | optional |
+
 
 Example of Request body:
 
