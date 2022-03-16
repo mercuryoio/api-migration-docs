@@ -6,11 +6,42 @@ Contact Your account manager to agree on what user data is allowed to silent sig
 
 ## 2. Acceptance: 
 
-1. You need to add to your Terms and Policy an agreement of sharing data with Mercuryo.
-2. You need to make an agreement with Mercuryo aabout Mercuryo using data for registration and third parties.
-3. You need to ask users to accept Mercurio term in your interface by publishing them on Your site.
+1. You need to add to your Terms and Policy agreement to share user data with Mercuryo.
+2. You need to make an agreement with Mercuryo that Mercuryo will use the data for registration and will use it to third parties.
+3. You need to ask users to accept  the Mercuryo terms in your interface.
+4. You ask your mercury manager: witch data are is allowed for silent sign-up for you. 
 
-## 3. API methods
+### 3. Partners settings
+
+| Parameter  | Description  |  
+| ------------- | -------------  |
+| phone  | is users phone allowed for silent sign-up or not |
+| email | is users email allowed for silent sign-up or not |
+| kyc: share-token | is sharing token with SumSub allowed or not |
+| kyc: photos + personal information | are users photo and personal information allowed to pass KYC |
+
+So you can transfer Users first_name, last_name, birthday, share_token, document (type and files) if it is allowed 
+
+**Personal info**
+| first_name | Users first name |
+| last_name | Users last name |
+| birthday | Users birthday |
+| country | get it by users phone |
+
+**User's document files** 
+document.files must contain an array with filename as key and file content as value. For current document type requirements for list of files differs.
+1. `id_card` Count of files must be 3. File names must be 'face.', 'side-1.', 'side-2.';
+2. `passport` Count of files must be 2. File names must be 'face.', 'side-1.';
+3. `driver_license` Count of files must be 3. File names must be 'face.', 'side-1.', 'side-2.'.
+Extensions in file names must correspond `.jpg`, `.png`.
+
+Common Rules: 
+1. Invalid params -> error
+2. Disallowed (partner settings) parameters -> disallowed parameters are ignored
+3. Unacceptable parameters - unacceptable parameters are ignored  (ex. kyc:photos for US, kyc:photos without personal info)
+4. Send docs is allowed only with personal data
+
+## 4. API methods
 There is two API methods: one for users that already have mercuryo account and one for new ones.
 
 ### 1. **Silent Login**
