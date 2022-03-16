@@ -35,7 +35,7 @@ So you can transfer Users first_name, last_name, birthday, share_token, document
 document.files must contain an array with filename as key and file content as value. For current document type requirements for list of files differs.
 1. `id_card` Count of files must be 3. File names must be `face.'`, `side-1.`, `side-2.`;
 2. `passport` Count of files must be 2. File names must be `face.`, `side-1.`;
-3. `driver_license` Count of files must be 3. File names must be 'face.', 'side-1.', 'side-2.'.
+3. `driver_license` Count of files must be 3. File names must be `face.`, `side-1.`, `side-2.`.
 Extensions in file names must correspond `.jpg`, `.png`.
 
 Common Rules: 
