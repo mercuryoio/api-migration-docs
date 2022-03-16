@@ -23,6 +23,9 @@ Contact Your account manager to agree on what user data is allowed to silent sig
 So you can transfer Users first_name, last_name, birthday, share_token, document (type and files) if it is allowed 
 
 **Personal info**
+
+| Parameter  | Description  |  
+| ------------- | -------------  |
 | first_name | Users first name |
 | last_name | Users last name |
 | birthday | Users birthday |
