@@ -38,7 +38,8 @@ Widget is the most convenient way to integrate with Mercuryo.
 
 7. [Errors](/Widget_API_Mercuryo_v1.6.md/#7-errors)
 8. [Sumsub shared token](/Widget_API_Mercuryo_v1.6.md/#8-sumsub-shared-token)
-9. [Design](/Widget_API_Mercuryo_v1.6.md/#8-design)
+9. [Silent login](/Widget_API_Mercuryo_v1.6.md/#9-silent-login)
+9. [Design](/Widget_API_Mercuryo_v1.6.md/#10-design)
 	
 ***
 ***
@@ -945,8 +946,125 @@ Share Token allows Mercuryo to check partner databases for user identity and use
 1. [**What is shared token**](https://developers.sumsub.com/api-reference/#sharing-applicants-between-partner-services)
 
 2. [**How it works**](https://youtu.be/DpGd8wy07RM)
+	
+	
+### 9. Silent login
 
-### 8. Design.
+#### 9.1. Silent Login
+
+Silent login is a tool that makes login in Mercuryo easier for your users. 
+Contact Your account manager to agree on what user data is allowed to silent sign-up for your users. 
+
+
+#### 9.2. Acceptance: 
+
+1. You need to add to your Terms and Policy an agreement of sharing data with Mercuryo.
+2. You need to make an agreement with Mercuryo aabout Mercuryo using data for registration and third parties.
+3. You need to ask users to accept Mercurio term in your interface by publishing them on Your site.
+
+#### 9.3. API methods
+There is two API methods: one for users that already have mercuryo account and one for new ones.
+
+##### 9.3.1. **Silent Login**
+
+For users already registered in Mercuryo use:
+
+Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/login`
+
+Note: Please use one and only one of available params
+
+| Header  | Type  |  
+| ------------- | -------------  |
+| Sdk-Partner-Token | your partner key |
+| **Parameter**  | **Description**  | 
+| ------------- | -------------  |
+| `phone` | users phone number |
+| `uuid` | id you got after using sign-up |
+| `email` | users email |
+
+Responses:
+
+| Case  | Code  |  Response  |
+| ------------- | -------------  |-------------  |
+| user is register by you | 200 | `init_token` and `init_token_type` |
+| user is register by other partner | 200 | `init_token` and `init_token_type` |
+| invalid phone | 400 |  invalid phone |
+| user is blocked by reasons: `LOCK_REASON_TOO_MANY_LOGIN_FAILURES`, `LOCK_REASON_FRAUD`, `LOCK_REASON_REFUND`, `LOCK_REASON_TOO_MANY_REQUESTS`, `LOCK_REASON_SANCTION_LIST`   | 403 | silent login forbidden |
+| user is deleted `LOCK_REASON_DELETED` | 403 | silent login forbidden |
+| invalid `sdk-partner-token` | 401 | wrong partner |
+| user is not registered | 404 | user not found |
+
+![img1](https://github.com/mercuryoio/api-migration-docs/blob/master/img/Silent%20Login.png)
+
+
+##### 9.3.2. **Silent SignUp**
+
+For users that have no Mercuryo account use:
+
+Request: `POST https://api.mercuryo.io/v1.6/sdk-partner/sign-up`
+
+Note:
+Email is obligatory in Mercuryo, that's why if you don't pass valid email - we will have to ask user during first login.
+All Mercuryo users have to go through 'Know your Customer' procedure. You can save your users from extra steps by passing valis SumSub share_token. 
+
+
+| Header  | Type  |  
+| ------------- | -------------  |
+| Sdk-Partner-Token | obligatory |
+| **Parameter**  | **Type**  | 
+| ------------- | ------------- |
+| **User data:**   |
+| accept | obligatory | 
+| phone | optional |  
+| email | optional |
+| share-token | optional |
+
+
+Example of Request body:
+
+```js
+{
+  "accept": "true",
+  "phone": "+4915207829731",
+  "email": "email@google.com",
+  }
+ ```
+
+| Case  | Code  |  Response  |
+| ------------- | -------------  |-------------  |
+| user is register by partner parameters | 200 | init_token and init_token_type |
+| user is already registered | 400 | user already registered in system |
+| user can not be registered  | 400 |  user \ can not be registered  |
+
+Response example:
+
+```js
+{
+"status": 200,
+"data": {
+"init_token": "06b931d9b6b696442",
+"init_token_type": "sdk_partner_authorization"
+}
+}
+```
+![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/img/Silent%20Sign%20up.png)
+
+#### 9.5. How to
+
+You need follow this steps:
+1. Get `init_token` and `init_token_type` by using API Methods
+2. Redirect user to `https://your_widget_url/?init_token=users_init_token&init_token_type=users_init_token_type`. The User needs to verify his phone\email by code that he will get on his phone\e-mail. The verification page is made on Mercuryo side
+
+**NB:**
+Mercuryos main contact type is **e-mail**
+
+#### 9.6 Init token
+
+`init_token` expires after first time it was passed to widget or after 1 hour.
+
+
+
+### 10. Design.
 
 To customise Mercuryo widget follow the instruction in figma [here](https://www.figma.com/file/NDsbB4owdvvD7T3EU9Ju4I/Customization?node-id=3%3A19).	
 
