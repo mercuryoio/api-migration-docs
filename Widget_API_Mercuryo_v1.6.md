@@ -284,7 +284,7 @@ There are two internal operations "deposit" and "sell" per 1 transaction
      5.2 [sell](/Widget_API_Mercuryo_v1.6.md/#452-sell)
 6. [Get list of supported countries](/Widget_API_Mercuryo_v1.6.md/#46-get-list-of-supported-countries)
 7. [Get the users country by IP](/Widget_API_Mercuryo_v1.6.md/#47-get-the-users-country-by-ip)
-8. [Get fee min](/Widget_API_Mercuryo_v1.6.md/#48-get-fee-min)
+8. [Get blockchain fee](/Widget_API_Mercuryo_v1.6.md/#48-get-fee-min)
 
 ****
 **Attention:**
@@ -741,12 +741,12 @@ Response example:
 }
 ```
 	
-#### 4.8. Get fee min
+#### 4.8. Get blockchain fee
 	
-If you want to get fee min mannualy use this method
+If you want to get blockchain fee mannualy use this method
 	
 Request: 
-`GET https://api.mercuryo.io/v1.6/widget/fee-min?widget_id=`
+`GET https://api.mercuryo.io/v1.6/widget/blockchain-fee?widget_id=`
 
 | Parameter | Description  | 
 | ------------- | -------------  |
@@ -760,25 +760,25 @@ Response example:
     "data": {
         "sell": {
             "EUR": {
-                "fee_min": "4",
+                "blockchain_fee": "4",
                 "currency": "EUR"
             },
             "USD": {
-                "fee_min": "4",
+                "blockchain_fee": "4",
                 "currency": "USD"
             }
         } ,
 	 "buy": {
             "ALGO": {
-                "fee_min": "0",
+                "blockchain_fee": "0",
                 "currency": "EUR"
             },
             "BAT": {
-                "fee_min": "13",
+                "blockchain_fee": "13",
                 "currency": "EUR"
             },
             "BCH": {
-                "fee_min": "0",
+                "blockchain_fee": "0",
                 "currency": "EUR"
             }...
 }
