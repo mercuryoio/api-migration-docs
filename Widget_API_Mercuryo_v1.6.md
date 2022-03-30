@@ -986,8 +986,8 @@ Responses:
 
 | Case  | Code  |  Response  |
 | ------------- | -------------  |-------------  |
-| user is register by you | 200 | `init_token` and `init_token_type` |
-| user is register by other partner | 200 | `init_token` and `init_token_type` |
+| user is register by you | 200 | `init_token` and `init_type_token` |
+| user is register by other partner | 200 | `init_token` and `init_type_token` |
 | invalid phone | 400 |  invalid phone |
 | user is blocked by reasons: `LOCK_REASON_TOO_MANY_LOGIN_FAILURES`, `LOCK_REASON_FRAUD`, `LOCK_REASON_REFUND`, `LOCK_REASON_TOO_MANY_REQUESTS`, `LOCK_REASON_SANCTION_LIST`   | 403 | silent login forbidden |
 | user is deleted `LOCK_REASON_DELETED` | 403 | silent login forbidden |
@@ -1032,7 +1032,7 @@ Example of Request body:
 
 | Case  | Code  |  Response  |
 | ------------- | -------------  |-------------  |
-| user is register by partner parameters | 200 | init_token and init_token_type |
+| user is register by partner parameters | 200 | init_token and init_type_token |
 | user is already registered | 400 | user already registered in system |
 | user can not be registered  | 400 |  user \ can not be registered  |
 
@@ -1043,7 +1043,7 @@ Response example:
 "status": 200,
 "data": {
 "init_token": "06b931d9b6b696442",
-"init_token_type": "sdk_partner_authorization"
+"init_type_token": "sdk_partner_authorization"
 }
 }
 ```
@@ -1052,8 +1052,8 @@ Response example:
 #### 9.5. How to
 
 You need follow this steps:
-1. Get `init_token` and `init_token_type` by using API Methods
-2. Redirect user to `https://your_widget_url/?init_token=users_init_token&init_token_type=users_init_token_type`. The User needs to verify his phone\email by code that he will get on his phone\e-mail. The verification page is made on Mercuryo side
+1. Get `init_token` and `init_type_token` by using API Methods
+2. Redirect user to `https://your_widget_url/?init_token=users_init_token&init_type_token=users_init_type_token`. The User needs to verify his phone\email by code that he will get on his phone\e-mail. The verification page is made on Mercuryo side
 
 **NB:**
 Mercuryos main contact type is **e-mail**
