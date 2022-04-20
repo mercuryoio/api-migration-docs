@@ -817,6 +817,7 @@ Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string
 	
 `https://sandbox-exchange.mrcr.io/?widget_id=your_widget_id&address=blockchain_adress&signature=user_generated_signature`
 
+*There are no autofilled parameters `address`, `address_map` and `hide_address` for Mercuryos own widget.*
 ***
 ***
 
