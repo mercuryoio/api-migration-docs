@@ -1023,12 +1023,15 @@ All Mercuryo users have to go through 'Know your Customer' procedure. You can sa
 
 Example of Request body:
 
-```js
+```
 {
-  "accept": "true",
-  "phone": "+4915207829731",
-  "email": "email@google.com",
+  “status”: 200,
+  “data”: {
+    “uuid”: “7f6f384b-3388-479f-a26e-3a6e290f5bfe”,
+    “init_token”: “0835f4b0c56de3586",
+    “init_type_token”: “sdk_partner_authorization”
   }
+}
  ```
 
 | Case  | Code  |  Response  |
@@ -1036,6 +1039,22 @@ Example of Request body:
 | user is register by partner parameters | 200 | init_token and init_type_token |
 | user is already registered | 400 | user already registered in system |
 | user can not be registered  | 400 |  user \ can not be registered  |
+	
+**Errors**
+
+| Case  | HTTP Code  |  Response code |
+| ------------- | -------------  |-------------  |
+| Some internal error | 403 | 403023 |
+| 'country_code' invalid | 400 | 400005 |
+| 'phone' is invalid | 400 | 400010 |
+| 'accept' field is invalid | 400 | 400006 |
+| 'email' field is invalid | 400 | 400037 |
+| 'language_code' is invalid | 400 | 400038 |
+| 'document' is invalid | 400 | 400039 |
+| 'birthday' is invalid | 400 | 400040 |
+| 'first_name' is invalid | 400 | 400041 |
+| 'last_name' is invalid | 400 | 400042 |
+| 'token' is invalid | 400 | 400043 |
 
 Response example:
 
