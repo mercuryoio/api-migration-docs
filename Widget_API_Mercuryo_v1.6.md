@@ -1021,7 +1021,7 @@ All Mercuryo users have to go through 'Know your Customer' procedure. You can sa
 | share-token | optional |
 
 
-Example of Request body:
+Example of Response body:
 
 ```
 {
