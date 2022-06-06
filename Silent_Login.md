@@ -8,6 +8,7 @@ Contact Your account manager to agree on what user data is allowed to silent sig
 You need follow this steps:
 1. Get `init_token` and `init_token_type` by using API Methods
 2. Redirect user to `https://your_widget_url/?init_token=users_init_token&init_token_type=users_init_token_type`. The User needs to verify his phone\email by code that he will get on his phone\e-mail. The verification page is made on Mercuryo side
+Example of redirection link: `https://exchange.mercuryo.io/?init_token=081b8291864c77282&init_token_type=sdk_partner`
 
 **NB:**
 Mercuryos main contact type is **e-mail**
