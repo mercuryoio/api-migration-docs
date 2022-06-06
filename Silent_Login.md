@@ -3,15 +3,22 @@
 Silent login is a tool that makes login in Mercuryo easier for your users. 
 Contact Your account manager to agree on what user data is allowed to silent sign-up for your users. 
 
+## 2. How to
 
-## 2. Acceptance: 
+You need follow this steps:
+1. Get `init_token` and `init_token_type` by using API Methods
+2. Redirect user to `https://your_widget_url/?init_token=users_init_token&init_token_type=users_init_token_type`. The User needs to verify his phone\email by code that he will get on his phone\e-mail. The verification page is made on Mercuryo side
+
+**NB:**
+Mercuryos main contact type is **e-mail**
+
+## 3. Acceptance: 
 
 1. You need to add to your Terms and Policy agreement to share user data with Mercuryo.
 2. You need to make an agreement with Mercuryo that Mercuryo will use the data for registration and will use it to third parties.
 3. You need to ask users to accept  the Mercuryo terms in your interface.
-4. You ask your mercury manager: witch data are is allowed for silent sign-up for you. 
 
-### 3. Partners settings
+## 4. Partners settings
 
 | Parameter  | Description  |  
 | ------------- | -------------  |
@@ -45,10 +52,10 @@ Common Rules:
 3. Unacceptable parameters - unacceptable parameters are ignored  (ex. kyc:photos for US, kyc:photos without personal info)
 4. Send docs is allowed only with personal data
 
-## 4. API methods
+## 5. API methods
 There is two API methods: one for users that already have mercuryo account and one for new ones.
 
-### 1. **Silent Login**
+### 5.1. **Silent Login**
 
 For users already registered in Mercuryo use:
 
@@ -80,7 +87,7 @@ Responses:
 ![img1](https://github.com/mercuryoio/api-migration-docs/blob/master/img/Silent%20Login.png)
 
 
-### 2. **Silent SignUp**
+### 5.2. **Silent SignUp**
 
 For users that have no Mercuryo account use:
 
@@ -107,7 +114,7 @@ All Mercuryo users have to go through 'Know your Customer' procedure. You can sa
 | birthday | optional |
 | document[type, files] | optional |
 
-Example of Request body:
+Example of Response body:
 
 ```
 {
@@ -154,15 +161,6 @@ Response example:
 }
 ```
 ![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/img/Silent%20Sign%20up.png)
-
-## 5. How to
-
-You need follow this steps:
-1. Get `init_token` and `init_token_type` by using API Methods
-2. Redirect user to `https://your_widget_url/?init_token=users_init_token&init_token_type=users_init_token_type`. The User needs to verify his phone\email by code that he will get on his phone\e-mail. The verification page is made on Mercuryo side
-
-**NB:**
-Mercuryos main contact type is **e-mail**
 
 ## 6 Init token
 
