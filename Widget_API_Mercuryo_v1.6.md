@@ -230,6 +230,7 @@ There are two internal operations "buy" and "withdraw" per 1 transaction
 | `pending` | waiting for any action from the user to continue the transaction (waiting for 3ds input or descriptor) |
 | `cancelled` | transaction cancelled (usually due to timeout of descriptor or 3ds) |
 | `paid` | transaction completed successfully (money debited from the card) |
+| `order_scheduled` | order is in schedule |
 | `order_failed` | transaction was rejected by the issuer bank |
 | `descriptor_failed` | the user entered an invalid descriptor three times |
 
