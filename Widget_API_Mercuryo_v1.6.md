@@ -426,7 +426,7 @@ Request:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
 
 Example:
-`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=BTC&amount=100&widget_id=67710925-8b40-4767-846e-3b88db69f04d`
 
 
 | Parameter | Description  | 
