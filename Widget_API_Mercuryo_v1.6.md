@@ -371,7 +371,7 @@ Response example:
             "buy": {
                 "id": "058dc74257a417582",
                 "transaction_id": "058dc74303d2d0459",
-                "widget_id": "25865df1-362d-411a-b9a1-f0acacf7e720",
+                "widget_id": "67710925-8b40-4767-846e-3b88db69f04d",
                 "merchant_transaction_id": "qq1122ww",
                 "fiat_currency": "EUR",
                 "fiat_amount": "27.77",
@@ -463,9 +463,9 @@ Request:
 `GET https://api.mercuryo.io/v1.6/public/convert?from=crypto&to=fiat&type=sell&amount=crypto_ammount&widget_id=your_widget_id`
 	
 Example:
-`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.1&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.1&widget_id=67710925-8b40-4767-846e-3b88db69f04d`
 	Or
-`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.3&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/public/convert?from=BTC&to=EUR&type=sell&amount=0.3&widget_id=67710925-8b40-4767-846e-3b88db69f04d`
 
 | Parameter | Description  | 
 | ------------- | -------------  |
@@ -498,7 +498,7 @@ Request:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
 
 Example:
-`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=USD&to=BTC&amount=100&widget_id=d9d9dab5-7127-417b-92fb-478bc90916b3`
+`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=USD&to=BTC&amount=100&widget_id=67710925-8b40-4767-846e-3b88db69f04d`
 
 
 | Parameter | Description  | 
