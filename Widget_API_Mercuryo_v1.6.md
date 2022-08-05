@@ -48,7 +48,7 @@ Widget is the most convenient way to integrate with Mercuryo.
 
 ***
 
-**Note:** if you want to add widget to your mobile application use Mercuryo wrappers for [iOs](https://github.com/mercuryoio/Mercuryo-Widget-Wrapper-iOS) and for [Android](https://github.com/mercuryoio/Mercuryo-Widget-Wrapper-Android)
+> **_NOTE:_** if you want to add widget to your mobile application use Mercuryo wrappers for [iOs](https://github.com/mercuryoio/Mercuryo-Widget-Wrapper-iOS) and for [Android](https://github.com/mercuryoio/Mercuryo-Widget-Wrapper-Android)
 
 ***
 
