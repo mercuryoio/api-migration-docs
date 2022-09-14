@@ -70,7 +70,7 @@ Note: Please use one and only one of available params
 | **Parameter**  | **Description**  | 
 | ------------- | -------------  |
 | `phone` | users phone number |
-| `uuid` | id you got after using sign-up |
+| `user_uuid4` | id you got after using sign-up |
 | `email` | users email |
 
 Responses:
@@ -121,7 +121,7 @@ Example of Response body:
 {
   “status”: 200,
   “data”: {
-    “uuid”: “7f6f384b-3388-479f-a26e-3a6e290f5bfe”,
+    “user_uuid4”: “7f6f384b-3388-479f-a26e-3a6e290f5bfe”,
     “init_token”: “0835f4b0c56de3586",
     “init_token_type”: “sdk_partner_authorization”
   }
