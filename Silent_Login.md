@@ -113,7 +113,6 @@ All Mercuryo users have to go through 'Know your Customer' procedure. You can sa
 | first_name | optional |
 | last_name | optional |
 | birthday | optional |
-| document[type, files] | optional |
 
 Example of Response body:
 
