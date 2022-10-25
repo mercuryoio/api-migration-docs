@@ -987,7 +987,7 @@ Note: Please use one and only one of available params
 | **Parameter**  | **Description**  | 
 | ------------- | -------------  |
 | `phone` | users phone number |
-| `uuid` | id you got after using sign-up |
+| `user_uuid4` | id you got after using sign-up |
 | `email` | users email |
 
 Responses:
