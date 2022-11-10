@@ -432,7 +432,7 @@ Request:
 `GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=fiat&to=crypto&amount=fiat_ammount&widget_id=your_widget_id`
 
 Example:
-`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=BTC&amount=100&widget_id=67710925-8b40-4767-846e-3b88db69f04d`
+`GET https://api.mercuryo.io/v1.6/widget/buy/rate?from=EUR&to=USDT&amount=500&network=TRON&widget_id=67710925-8b40-4767-846e-3b88db69f04d`
 
 
 | Parameter | Description  | 
@@ -441,6 +441,7 @@ Example:
 | `to` | your crypto |
 | `type` | transaction type |
 | `amount` | fiat amount |
+| `network` | cryptocurrency network |
 | `widget_id` | your widget id |
 
 Response example:
