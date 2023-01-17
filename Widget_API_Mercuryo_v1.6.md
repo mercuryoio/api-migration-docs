@@ -969,7 +969,7 @@ Contact Your account manager to agree on what user data is allowed to silent sig
 
 1. You need to add to your Terms and Policy an agreement of sharing data with Mercuryo.
 2. You need to make an agreement with Mercuryo aabout Mercuryo using data for registration and third parties.
-3. You need to ask users to accept Mercurio term in your interface by publishing them on Your site.
+3. You need to ask users to accept Mercuryo term in your interface by publishing them on Your site.
 
 #### 9.3. API methods
 There is two API methods: one for users that already have mercuryo account and one for new ones.
