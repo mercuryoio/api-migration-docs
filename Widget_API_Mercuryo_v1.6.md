@@ -64,7 +64,7 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 #### 1.2. Get a dashboard	
 [Partners admin](https://partners.mercuryo.io)  
 
-![img1](https://github.com/mercuryoio/api-migration-docs/blob/master/img1.png)
+![img1](https://github.com/mercuryoio/api-migration-docs/blob/master/new_dashboard_1.jpg)
 
 | Section  | Description  | 
 | ------------- | -------------  |
@@ -77,7 +77,7 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 #### 1.3 Set up a widget
 **My widgets → Create Partner Widget**
 
-![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/img2.png)
+![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/new_dashboard_setupawidget.jpg)
 
 | Section  | Description  | 
 | ------------- | -------------  |
@@ -217,7 +217,7 @@ Follow this steps:
 4. Select your widget on the **Widget Id** field
 5. Click on the **Send test callback** button
 
-![testcallbackimg](https://github.com/mercuryoio/api-migration-docs/blob/master/testcallbackimg.png)
+![testcallbackimg](https://github.com/mercuryoio/api-migration-docs/blob/master/new_dashboard_testcallback.jpg)
 
 
 ***
@@ -805,7 +805,7 @@ On the dashboard, in the widget’s setting, there is a section where you can en
 The partner sets Secret (automatically generated or manually) and checks the “Check signature“ box.
 
 
-![img3](https://github.com/mercuryoio/api-migration-docs/blob/master/img8.jpg)
+![img3](https://github.com/mercuryoio/api-migration-docs/blob/master/new_dashboard_secret.jpg)
 	
 If you pass parameter `address` so parameter `signature` is obligatory too.
 
@@ -819,7 +819,7 @@ For signature generation you can use [this](https://www.freeformatter.com/)
 
 Cryptography & Security -> SHA-512 Generator -> Fill the **Copy-paste the string here** field
 
-![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/img9.png)
+![img6](https://github.com/mercuryoio/api-migration-docs/blob/master/new_dashboard_sha512.jpg)
 	
 **Example link:**
 	
