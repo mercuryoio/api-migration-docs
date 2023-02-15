@@ -68,29 +68,24 @@ For redirection to Mercuryo platform use  [**redirect**](https://widget.mercuryo
 
 | Section  | Description  | 
 | ------------- | -------------  |
-| Dashboard | page with transaction information, also you can add widget by tapping on the <Add widget> button |
-| Profile | you can set up your commission and change password |	
-| My widgets | list of widgets |
-| Widget callbacks | list of callbacks; you can send test callback from this page |
-| Reports | log of Transactions, Referrals or Referrals Withdraw; choose one of them to find the information |
+| Widgets | list of widgets, fees and callbacks settings |
+| Transactions | list of your transactions |
 
 #### 1.3 Set up a widget
-**My widgets → Create Partner Widget**
+**Widgets → Add widget**
 
 ![img2](https://github.com/mercuryoio/api-migration-docs/blob/master/new_dashboard_setupawidget.jpg)
 
 | Section  | Description  | 
 | ------------- | -------------  |
-| Name | your widget name |
-| Domain |   `https://domain.io` 
+| Widget name | your widget name |
+| Domain URL|   `https://domain.io` 
  **Note:** Note: Please make sure there are no symbols or backspace after `https://domain.io` The widget will not work properly and you’ll see `widget.mercuryo.io refused to connect` message.|
 | Alias | transfer your widget id to your widget alias |
 | Backward URL | merchant URL where the users will return to from Redirect |
 | Callback URL | merchant server URL which listens to callbacks automatically when Mercuryo updates transaction status | 
 | Sign Key | Callbacks signature check |
-| Check signature  checkbox | enable or disable signature verification |
 | Secret Key | your secret key for your signature verification |
-| Is Active checkbox | it shows your is widget  active or not |
 
 	
 #### 1.4 Widget general questions
