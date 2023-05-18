@@ -25,7 +25,7 @@ Mercuryos main contact type is **e-mail**
 | ------------- | -------------  |
 | phone  | is users phone allowed for silent sign-up or not |
 | email | is users email allowed for silent sign-up or not |
-| kyc: share-token | is sharing token with SumSub allowed or not |
+| kyc: share_token | is sharing token with SumSub allowed or not |
 | kyc: photos + personal information | are users photo and personal information allowed to pass KYC |
 
 So you can transfer Users first_name, last_name, birthday, share_token, document (type and files) if it is allowed 
