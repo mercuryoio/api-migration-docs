@@ -108,7 +108,7 @@ All Mercuryo users have to go through 'Know your Customer' procedure. You can sa
 | accept | obligatory | 
 | phone | optional |  
 | email | optional |
-| share-token | optional |
+| share_token | optional |
 | country_code | optional |
 | first_name | optional |
 | last_name | optional |
